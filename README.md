@@ -106,21 +106,19 @@ Not every project needs every technology. Complexity must earn its place.
 | [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md) | Shared visual foundations, themes, accessibility, and design conventions |
 | [ENGINEERING-STANDARDS.md](ENGINEERING-STANDARDS.md) | Development lifecycle, code quality, testing, security, and definition of done |
 | [INTEGRATION-STRATEGY.md](INTEGRATION-STRATEGY.md) | API, event, webhook, security, and integration contract guidance |
+| [Project status dashboard](docs/PROJECT-STATUS.md) | Evidence-based status, milestones, blockers, and next actions |
+| [Project catalogue](docs/project-catalogue/README.md) | Scope and direction of the portfolio projects |
+| [ADR index](docs/decisions/README.md) | Architecture decision process and accepted decisions |
+| [Documentation templates](docs/templates/README.md) | Reusable project README, technical specification, feature tracker, and development log templates |
+| [Development log](docs/development-log/README.md) | Portfolio-level work history and evidence conventions |
 
-Additional architecture decisions and project documentation will be added as the portfolio evolves.
+Additional project-specific documentation belongs in each product repository.
 
 ## Project status
 
-Statuses are evidence-based:
+Statuses are evidence-based and use a consistent portfolio vocabulary: Proposed, Planned, Discovery, In Progress, In Review, Blocked, Complete, Maintained, Paused, and Archived. A Complete status applies to a defined milestone, not automatically to an entire product.
 
-- **Planned:** identified as a possible future project.
-- **Discovery:** scope, requirements, risks, and technical options are being investigated.
-- **Active:** implementation is underway.
-- **Functional:** the defined core workflow runs end to end in its stated environment.
-- **Validated:** relevant acceptance and quality checks have passed with recorded evidence.
-- **Release candidate / Released:** release checks are complete, or a versioned release has been published.
-
-A working prototype is not automatically production-ready. See ROADMAP.md for the full lifecycle and current project status.
+See the [project status dashboard](docs/PROJECT-STATUS.md) for current portfolio status, evidence, blockers, and next actions. A working prototype is not automatically production-ready.
 
 ## Repository structure
 
@@ -135,9 +133,22 @@ engineering-lab/
 ├── ENGINEERING-STANDARDS.md
 ├── INTEGRATION-STRATEGY.md
 └── docs/
+    ├── PROJECT-STATUS.md
     ├── decisions/
-    ├── architecture/
-    └── project-catalogue/
+    │   ├── README.md
+    │   ├── ADR-TEMPLATE.md
+    │   └── ADR-*.md
+    ├── development-log/
+    │   ├── README.md
+    │   └── YYYY-MM-DD.md
+    ├── project-catalogue/
+    │   └── README.md
+    └── templates/
+        ├── README.md
+        ├── PROJECT-README-TEMPLATE.md
+        ├── TECHNICAL-SPECIFICATION-TEMPLATE.md
+        ├── FEATURE-TRACKER-TEMPLATE.md
+        └── DEVELOPMENT-LOG-TEMPLATE.md
 ```
 
 Each product is maintained in its own repository when implementation begins.
