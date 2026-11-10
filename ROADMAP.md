@@ -19,8 +19,8 @@ The roadmap changes when evidence, learning, technical constraints, or project v
 
 | Item | Status | Evidence and qualification |
 |---|---|---|
-| ENGINEERING LAB hub | Active | Repository exists; core design, standards, architecture, and integration documents have been established |
-| AEGIS Security Platform | Active | Existing FastAPI-based educational security platform; dashboard and core alert workflows have been exercised |
+| ENGINEERING LAB hub | In Progress | Repository exists; core design, standards, architecture, and integration documents have been established |
+| AEGIS Security Platform | In Progress | Existing FastAPI-based educational security platform; dashboard and core alert workflows have been exercised |
 | SENTINEL QA | Planned | Intended next major product; not yet implemented |
 | All other catalogue projects | Planned | Concepts for future discovery; not yet implemented |
 
@@ -189,7 +189,7 @@ The catalogue below is a planning inventory, not a declaration that these produc
 
 | Project | Intended domain | Current status |
 |---|---|---|
-| AEGIS | Cybersecurity detection and response | Active |
+| AEGIS | Cybersecurity detection and response | In Progress |
 | SENTINEL QA | Quality engineering and test automation | Planned — next major build |
 | MERIDIAN | Enterprise business/financial services software | Planned |
 | ORBIT | Low-code workflow and application builder | Planned |
@@ -215,22 +215,24 @@ The catalogue below is a planning inventory, not a declaration that these produc
 | QUANTUM | Quantum computing simulator | Planned |
 | AURORA | Digital twin and simulation | Planned |
 
-A project moves beyond Planned only when discovery begins. It becomes Active when implementation work is underway. Functional, Validated, Release candidate, and Released require evidence defined in Section 6.
+A project moves from Planned to Discovery when investigation begins, and to In Progress when implementation work is underway. Use the shared portfolio status vocabulary defined below and in [docs/PROJECT-STATUS.md](docs/PROJECT-STATUS.md).
 
 ## 6. Project lifecycle and status definitions
 
-Use these statuses consistently:
+Use the same status vocabulary as the portfolio dashboard:
 
-- **Planned:** Listed as a possible future project; no committed implementation.
-- **Discovery:** Problem, users, scope, risks, requirements, and technical options are being investigated.
-- **Active:** Implementation is underway against an agreed milestone.
+- **Proposed:** An idea under consideration; not yet selected.
+- **Planned:** Selected for future work, but implementation has not started.
+- **Discovery:** Requirements, risks, feasibility, users, and technical options are being investigated.
+- **In Progress:** Implementation is underway against an agreed milestone.
+- **In Review:** A defined change is awaiting review or acceptance.
+- **Blocked:** Progress depends on an identified unresolved issue.
+- **Complete:** A specifically defined milestone meets its acceptance criteria; this does not imply the entire product is complete.
+- **Maintained:** The product is in a stable maintenance mode with ongoing support.
 - **Paused:** Work is intentionally stopped; record the reason and restart condition.
-- **Functional:** The defined core workflow runs end to end in the stated environment.
-- **Validated:** Acceptance tests, relevant quality checks, and documented verification evidence pass.
-- **Release candidate:** Documentation, configuration, security review, deployment, and release checks are complete apart from explicitly listed blockers.
-- **Released:** A versioned release is published with reproducible instructions and known limitations.
+- **Archived:** Work is retired and no longer actively maintained.
 
-A status applies only to the scope and version actually verified. A working local prototype is not automatically production-ready.
+A status applies only to the scope and version actually verified. A working local prototype is not automatically production-ready. A release may be recorded in the project's release history without creating a separate portfolio status category.
 
 ### Milestone gate
 
@@ -288,10 +290,9 @@ Keep a short record of material changes in docs/decisions. Update this roadmap w
 
 ## 10. Immediate next actions
 
-1. Complete the portfolio README as the repository's front door.
-2. Add a project catalogue page and link the core documents.
-3. Record the AEGIS baseline and verify its current test/run instructions.
-4. Start SENTINEL QA discovery: problem statement, scope, architecture, toolchain, and first acceptance criteria.
-5. Build the first SENTINEL QA vertical slice only after its design is reviewed.
+1. Review the portfolio documentation and tracking system for consistency.
+2. Verify the AEGIS repository baseline, including run instructions, tests, and current known limitations.
+3. Start SENTINEL QA discovery: problem statement, scope, architecture, toolchain, and first acceptance criteria.
+4. Build the first SENTINEL QA vertical slice only after its design is reviewed.
 
 **Guiding rule:** build fewer systems, understand them deeply, verify them rigorously, and explain them clearly.
