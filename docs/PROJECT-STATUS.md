@@ -63,7 +63,7 @@ For every meaningful status change:
 
 ## Current priorities
 
-1. Finish the ENGINEERING LAB documentation and tracking foundation.
+1. Complete the repository-wide documentation consistency review.
 2. Verify the current AEGIS baseline and select the next bounded milestone.
 3. Define SENTINEL QA as the next major new product, beginning with discovery and a testable MVP.
 4. Select further products based on learning value, feasibility and available time.
@@ -73,3 +73,4 @@ For every meaningful status change:
 | Date | Change |
 |---|---|
 | 2026-11-10 | Initial portfolio status dashboard created from the verified documentation foundation and known project context. |
+| 2026-11-10 | Homepage navigation and roadmap status vocabulary aligned with the tracking system. |
