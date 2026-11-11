@@ -79,7 +79,7 @@ Do not share internal database tables as an integration mechanism. Do not introd
 
 ## Implementation and verification
 
-The portfolio integration strategy documents the contract principles. Specific integrations, including the proposed SENTINEL QA-to-AEGIS test connection, remain unimplemented until their contracts, security controls, tests, and operational behaviour are delivered and verified.
+The portfolio integration strategy documents the contract principles. Specific integrations remain unimplemented until their contracts, security controls, tests, and operational behaviour are delivered and verified.
 
 ## Revisit conditions
 
