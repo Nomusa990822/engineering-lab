@@ -60,7 +60,7 @@ A defensive security platform for ingesting security events, applying detection 
 
 **Evidence of progress**
 
-The existing repository has a working dashboard and exercised alert workflows. This does not imply production readiness; current limitations and verification evidence belong in the AEGIS repository.
+The existing product repository has a working dashboard and exercised alert workflows. This does not imply production readiness; the consolidated AEGIS capability, limitation and verification record is maintained in [ENGINEERING LAB](../projects/AEGIS.md).
 
 **Future integration opportunities**
 - SENTINEL QA may exercise documented AEGIS APIs in an isolated test environment.
