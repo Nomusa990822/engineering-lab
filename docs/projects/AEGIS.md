@@ -199,7 +199,7 @@ At product revision `8fb3972b255c96cda479b270d164adf3ce21f455`, the five latest 
 | Secret scanning | [Run 30](https://github.com/Nomusa990822/aegis-security-platform/actions/runs/42920027677) | Gitleaks scan across Git history |
 | CodeQL | [Run 38](https://github.com/Nomusa990822/aegis-security-platform/actions/runs/42920027792) | Python and JavaScript/TypeScript analysis |
 
-Successful workflow completion means those configured jobs completed successfully. It does not establish zero vulnerabilities, comprehensive penetration testing, or production readiness.
+Successful workflow completion means those configured jobs completed successfully. It does not establish zero vulnerabilities, comprehensive penetration testing, or production readiness. The container configuration also documents a Trivy exception for CVE-2025-47273 associated with setuptools metadata in the upstream `python:3.14-slim` image; the final image removes setuptools package files and metadata and asserts that no setuptools distribution remains. This is a documented, scoped exception—not a claim that the upstream finding never existed—and it should be revisited if the base image or removal checks change.
 
 ### 5.5 Local test-suite reconciliation
 
