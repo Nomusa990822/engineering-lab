@@ -20,7 +20,7 @@
 
 | Project | Status | Current milestone | Blockers / dependencies | Latest evidence | Next action |
 |---|---|---|---|---|---|
-| ENGINEERING LAB | In Progress | Portfolio foundation | None recorded | Core documentation and ADRs committed to the hub | Complete tracking templates and link them from the homepage |
+| ENGINEERING LAB | In Progress | Portfolio documentation consistency | None recorded | Core documentation, templates, ADRs, project catalogue, status dashboard and AEGIS consolidated record are linked from the hub | Maintain consistency as projects and milestones change |
 | AEGIS | In Progress | Baseline verification and operational hardening ([consolidated AEGIS record](projects/AEGIS.md)) | Port visibility review, endpoint-specific authorization matrix, local test reconciliation, backup/restore evidence | 10–11 Nov checkpoint: non-root/read-only container controls, persistent SQLite after restart, SQLite integrity and foreign-key checks, pip check, selected API role outcomes, dashboard rendering, and five successful latest CI workflows recorded in the AEGIS repository and summarized in the ENGINEERING LAB log | Resume in the AEGIS development conversation: inspect working tree first, then complete the outstanding checks; do not rebuild or repeat verified checks without cause |
 | SENTINEL QA | Planned | Discovery and technical specification | AEGIS API contract should be reviewed before integration testing is designed | No implementation recorded in this portfolio tracker | Define MVP scope, architecture and acceptance criteria |
 | MERIDIAN | Planned | Discovery | Depends on requirements and technology selection | No implementation recorded in this portfolio tracker | Write problem statement and domain model |
