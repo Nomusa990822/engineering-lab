@@ -75,3 +75,4 @@ For every meaningful status change:
 | 2026-11-10 | Initial portfolio status dashboard created from the verified documentation foundation and known project context. |
 | 2026-11-10 | Homepage navigation and roadmap status vocabulary aligned with the tracking system. |
 | 2026-11-11 | Recorded the AEGIS 10–11 November engineering checkpoint and created a consolidated AEGIS project record in ENGINEERING LAB, linking the technical snapshot, feature inventory, verification ledger and remaining work. AEGIS implementation remains in its independent repository and dedicated development conversation. |
+| 2026-11-11 | Added the 715-test result and live synthetic event-to-alert-to-investigation evidence, including five linked events, MITRE T1110.001 mapping, investigation note and timeline. Retained the outstanding backup/restore, route-matrix and port-visibility limitations. |
