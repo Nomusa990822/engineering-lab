@@ -46,6 +46,7 @@ The portfolio log records cross-project work and major portfolio-level sessions.
 
 Start from [the development log template](../templates/DEVELOPMENT-LOG-TEMPLATE.md).
 
-## Initial entry
+## Entries
 
-The initial portfolio foundation work is recorded in [2026-11-10.md](2026-11-10.md).
+- [2026-11-10.md](2026-11-10.md) — portfolio documentation and governance foundation.
+- [2026-11-11-aegis.md](2026-11-11-aegis.md) — AEGIS engineering checkpoint, verification evidence, limitations, and next actions.
