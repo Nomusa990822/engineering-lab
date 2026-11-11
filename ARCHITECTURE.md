@@ -38,7 +38,6 @@ Each product is maintained in its own repository and owns its application logic,
 
 Examples include:
 
-- **AEGIS** — cybersecurity event detection and response.
 - **SENTINEL QA** — automated quality engineering and test orchestration.
 - **MERIDIAN** — enterprise financial and services management.
 - **ORBIT** — visual low-code application and workflow builder.
@@ -96,7 +95,6 @@ The intended repository model is:
 ```text
 Nomusa990822/
 ├── engineering-lab/             # Portfolio hub and shared specifications
-├── aegis-security-platform/     # Independent cybersecurity product
 ├── sentinel-qa/                 # Independent QA engineering platform
 ├── meridian/                    # Independent enterprise application
 ├── orbit/                       # Independent low-code platform
@@ -170,13 +168,10 @@ The following connections describe possible future capabilities. They are not st
 
 | Producer | Consumer | Possible purpose | Candidate mechanism |
 |---|---|---|---|
-| SENTINEL QA | AEGIS | Exercise AEGIS APIs and verify security workflows | REST API and test reports |
-| AEGIS | CHRONOS | Publish security events for downstream processing | Versioned events |
 | CHRONOS | OBSERVA | Expose event-stream health and processing signals | Metrics and event integration |
 | OBSERVA | ATLAS | Trigger controlled recovery or operational tasks | Authenticated API with approval |
 | NEBULA | Selected products | Standardise deployment workflows | CI/CD and deployment interfaces |
 | ORBIT | MERIDIAN | Submit approved business workflows | Versioned API |
-| CORTEX | AEGIS | Assist an analyst with alert context | Read-scoped API with human oversight |
 | ORACLE | Product documentation | Search technical documentation across projects | Indexed document ingestion and retrieval |
 
 ### Integration constraints
@@ -241,7 +236,6 @@ The ENGINEERING LAB design system defines shared visual foundations for portfoli
 
 It provides theme tokens, typography, spacing, component-state guidance and accessibility expectations. It does not force every product to look identical.
 
-Products may have distinct identities and accents while preserving shared usability principles. AEGIS retains its own established visual identity; the portfolio design specification must not overwrite or redesign it.
 
 The design-system document is a specification. A working shared component library or theme package must be treated as a separate implementation deliverable and verified before being described as available.
 
@@ -330,7 +324,6 @@ This document defines the intended portfolio architecture. At the time of writin
 
 - the ENGINEERING LAB GitHub repository is the portfolio hub;
 - the design system and engineering standards are documented specifications;
-- AEGIS exists as an independent project;
 - the integration landscape is illustrative and must not be represented as implemented;
 - future products and shared runtime infrastructure remain planned until separately built and verified.
 
