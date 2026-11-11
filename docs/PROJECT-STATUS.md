@@ -21,7 +21,7 @@
 | Project | Status | Current milestone | Blockers / dependencies | Latest evidence | Next action |
 |---|---|---|---|---|---|
 | ENGINEERING LAB | In Progress | Portfolio foundation | None recorded | Core documentation and ADRs committed to the hub | Complete tracking templates and link them from the homepage |
-| AEGIS | In Progress | Security platform development | Confirm current repository state before selecting the next feature | Dashboard and core alert workflows have been exercised in development | Review the repository, tests and open work; record a verified baseline |
+| AEGIS | In Progress | Baseline verification and operational hardening | Port visibility review, endpoint-specific authorization matrix, local test reconciliation, backup/restore evidence | 10–11 Nov checkpoint: non-root/read-only container controls, persistent SQLite after restart, SQLite integrity and foreign-key checks, pip check, selected API role outcomes, dashboard rendering, and five successful latest CI workflows recorded in the AEGIS repository and summarized in the ENGINEERING LAB log | Resume in the AEGIS development conversation: inspect working tree first, then complete the outstanding checks; do not rebuild or repeat verified checks without cause |
 | SENTINEL QA | Planned | Discovery and technical specification | AEGIS API contract should be reviewed before integration testing is designed | No implementation recorded in this portfolio tracker | Define MVP scope, architecture and acceptance criteria |
 | MERIDIAN | Planned | Discovery | Depends on requirements and technology selection | No implementation recorded in this portfolio tracker | Write problem statement and domain model |
 | ORBIT | Planned | Discovery | Clarify boundary with FLOWSTATE | No implementation recorded in this portfolio tracker | Define the visual builder's distinct scope |
@@ -74,3 +74,4 @@ For every meaningful status change:
 |---|---|
 | 2026-11-10 | Initial portfolio status dashboard created from the verified documentation foundation and known project context. |
 | 2026-11-10 | Homepage navigation and roadmap status vocabulary aligned with the tracking system. |
+| 2026-11-11 | Recorded the AEGIS 10–11 November engineering checkpoint in the portfolio development log; updated AEGIS status and next actions based on CI and runtime evidence. AEGIS implementation remains in its independent repository and dedicated development conversation. |
