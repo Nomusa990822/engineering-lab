@@ -60,7 +60,7 @@ A status must reflect verified repository evidence. A document describing a futu
 **Objective:** Preserve AEGIS as the existing flagship while building a credible enterprise-grade QA automation platform.
 
 **AEGIS baseline**
-- Record the current working state and how to run it. **Checkpoint recorded 11 November 2026** in [the ENGINEERING LAB development log](docs/development-log/2026-11-11-aegis.md).
+- Record the current working state and how to run it. **Checkpoint recorded 11 November 2026** in the [consolidated AEGIS portfolio record](docs/projects/AEGIS.md) and [dated development log](docs/development-log/2026-11-11-aegis.md).
 - A 10–11 November verification checkpoint has been recorded: hardened container configuration, persistent SQLite data after restart, SQLite integrity and foreign-key checks, dependency consistency, selected API role outcomes, dashboard rendering, and five successful latest CI workflows.
 - Remaining verification: Codespaces port visibility, complete route-specific authorization matrix, local full-suite results from the current working tree, working-tree reconciliation, and backup/restore exercise.
 - Continue implementation and detailed product-level documentation in the independent AEGIS repository and its dedicated development conversation. ENGINEERING LAB records only portfolio status, milestones, and cross-project decisions.
