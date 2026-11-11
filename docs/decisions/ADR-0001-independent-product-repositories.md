@@ -75,7 +75,7 @@ Products must not share internal database tables by default. Cross-product commu
 
 ## Implementation and verification
 
-The ENGINEERING LAB hub exists as a separate repository. AEGIS remains in its own repository. Future product repositories will be created when their discovery and scope gates are met.
+The ENGINEERING LAB hub exists as a separate repository. Future product repositories will be created when their discovery and scope gates are met.
 
 Verification consists of confirming product code, issue tracking, tests, and release workflows can be managed independently, and that integrations use documented contracts rather than shared database access.
 
