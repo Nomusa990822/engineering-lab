@@ -230,7 +230,6 @@ Products may use a distinct accent while retaining shared semantic theme tokens 
 
 | Product | Accent |
 |---|---|
-| AEGIS | `#2F80FF` |
 | SENTINEL QA | `#D97706` |
 | MERIDIAN | `#2563EB` |
 | ORBIT | `#7C3AED` |
@@ -252,8 +251,6 @@ Products may use a distinct accent while retaining shared semantic theme tokens 
 | PHOENIX | `#9F1239` |
 
 These are provisional identity choices. Before use, verify contrast against both themes and adjust derived foregrounds or tints as needed. A product accent must not replace success, warning, danger or information colours.
-
-**AEGIS preservation rule:** AEGIS is an established independent product with its own visual identity. This design system is a shared reference, not permission to redesign or overwrite AEGIS. Any future adoption must be deliberate and must preserve working functionality and established brand elements.
 
 ## 11. Accessibility and quality gates
 
