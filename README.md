@@ -108,6 +108,7 @@ Not every project needs every technology. Complexity must earn its place.
 | [ENGINEERING-STANDARDS.md](ENGINEERING-STANDARDS.md) | Development lifecycle, code quality, testing, security, and definition of done |
 | [INTEGRATION-STRATEGY.md](INTEGRATION-STRATEGY.md) | API, event, webhook, security, and integration contract guidance |
 | [Project status dashboard](docs/PROJECT-STATUS.md) | Evidence-based status, milestones, blockers, and next actions |
+| [AEGIS project record](docs/projects/AEGIS.md) | Consolidated AEGIS scope, technical snapshot, capability inventory, verification ledger, limitations, and next actions |
 | [Project catalogue](docs/project-catalogue/README.md) | Scope and direction of the portfolio projects |
 | [ADR index](docs/decisions/README.md) | Architecture decision process and accepted decisions |
 | [Documentation templates](docs/templates/README.md) | Reusable project README, technical specification, feature tracker, and development log templates |
@@ -144,6 +145,8 @@ engineering-lab/
     │   └── YYYY-MM-DD.md
     ├── project-catalogue/
     │   └── README.md
+    ├── projects/
+    │   └── AEGIS.md
     └── templates/
         ├── README.md
         ├── PROJECT-README-TEMPLATE.md
