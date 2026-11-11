@@ -43,6 +43,7 @@ AEGIS is the existing flagship project: an educational security platform built a
 - Focus: security event handling, detection workflows, alert lifecycle, and operational visibility.
 - Status: active development; capabilities and limitations are documented in its own repository.
 
+**Portfolio record:** [AEGIS project record](docs/projects/AEGIS.md) — consolidated scope, technical snapshot, capability inventory, verification evidence and remaining work.  
 **Repository:** [aegis-security-platform](https://github.com/Nomusa990822/aegis-security-platform)
 
 ### SENTINEL QA — Quality engineering platform
@@ -112,7 +113,7 @@ Not every project needs every technology. Complexity must earn its place.
 | [Documentation templates](docs/templates/README.md) | Reusable project README, technical specification, feature tracker, and development log templates |
 | [Development log](docs/development-log/README.md) | Portfolio-level work history and evidence conventions |
 
-Additional project-specific documentation belongs in each product repository.
+Product source code and product-runtime documentation belong in each independent product repository. ENGINEERING LAB maintains the portfolio-level AEGIS record at [docs/projects/AEGIS.md](docs/projects/AEGIS.md); do not place this portfolio record or its progress reports in the AEGIS product repository.
 
 ## Project status
 
