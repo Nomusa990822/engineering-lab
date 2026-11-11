@@ -3,7 +3,7 @@
 **Portfolio:** ENGINEERING LAB  
 **Tagline:** SOFTWARE · SYSTEMS · INTELLIGENCE · RESEARCH  
 **Roadmap type:** Living strategy and delivery plan  
-**Last established:** 10 November 2026
+**Last updated:** 11 November 2026
 
 ---
 
@@ -20,7 +20,7 @@ The roadmap changes when evidence, learning, technical constraints, or project v
 | Item | Status | Evidence and qualification |
 |---|---|---|
 | ENGINEERING LAB hub | In Progress | Repository exists; core design, standards, architecture, and integration documents have been established |
-| AEGIS Security Platform | In Progress | Existing FastAPI-based educational security platform; dashboard and core alert workflows have been exercised |
+| AEGIS Security Platform | In Progress | Existing FastAPI-based educational security platform; 10–11 November checkpoint records container hardening, persistence and database checks, selected API authorization outcomes, dashboard verification, and five successful latest CI workflows; outstanding operational checks remain |
 | SENTINEL QA | Planned | Intended next major product; not yet implemented |
 | All other catalogue projects | Planned | Concepts for future discovery; not yet implemented |
 
@@ -60,9 +60,10 @@ A status must reflect verified repository evidence. A document describing a futu
 **Objective:** Preserve AEGIS as the existing flagship while building a credible enterprise-grade QA automation platform.
 
 **AEGIS baseline**
-- Record the current working state and how to run it.
-- Verify key API, alert lifecycle, dashboard, and database behaviours.
-- Maintain automated tests and security/dependency checks.
+- Record the current working state and how to run it. **Checkpoint recorded 11 November 2026** in [the ENGINEERING LAB development log](docs/development-log/2026-11-11-aegis.md).
+- A 10–11 November verification checkpoint has been recorded: hardened container configuration, persistent SQLite data after restart, SQLite integrity and foreign-key checks, dependency consistency, selected API role outcomes, dashboard rendering, and five successful latest CI workflows.
+- Remaining verification: Codespaces port visibility, complete route-specific authorization matrix, local full-suite results from the current working tree, working-tree reconciliation, and backup/restore exercise.
+- Continue implementation and detailed product-level documentation in the independent AEGIS repository and its dedicated development conversation. ENGINEERING LAB records only portfolio status, milestones, and cross-project decisions.
 - Record known limitations and avoid unverified claims.
 - Do not redesign its visual identity as part of the shared portfolio work.
 
