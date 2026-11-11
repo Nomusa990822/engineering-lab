@@ -10,7 +10,6 @@
 
 <p align="center">
   <img alt="Portfolio hub" src="https://img.shields.io/badge/PORTFOLIO-HUB-0f172a?style=for-the-badge&logo=github&logoColor=8ef1e5" />
-  <img alt="Active project: AEGIS" src="https://img.shields.io/badge/ACTIVE-AEGIS-0f172a?style=for-the-badge&logo=letsencrypt&logoColor=8ef1e5" />
   <img alt="Next planned: SENTINEL QA" src="https://img.shields.io/badge/NEXT%20PLANNED-SENTINEL%20QA-1e293b?style=for-the-badge&logo=githubactions&logoColor=7c9cff" />
   <img alt="Status is evidence-based" src="https://img.shields.io/badge/STATUS-EVIDENCE--BASED-1e293b?style=for-the-badge&logo=target&logoColor=7c9cff" />
 </p>
@@ -53,7 +52,6 @@ Each product has its own purpose, repository, architecture, and release lifecycl
 
 | Area | Projects | Current state |
 |---|---|---|
-| **Cybersecurity** | AEGIS | Active development |
 | **Quality engineering** | SENTINEL QA, QUANTUM TEST LAB, SENTINEL CODE | SENTINEL QA planned; others directional |
 | **Enterprise applications and automation** | MERIDIAN, ORBIT, FLOWSTATE, APEX, VERITAS | Directional catalogue |
 | **Computer science foundations** | FORGE, NEXUS, GITFORGE | Directional catalogue |
@@ -68,26 +66,12 @@ Each product has its own purpose, repository, architecture, and release lifecycl
 
 ## Current Work
 
-### AEGIS: Security detection and response
-
-AEGIS is the existing flagship project: an educational security platform built around event ingestion, detection rules, alert management, and a web dashboard.
-
-- **Backend foundation:** Python and FastAPI
-- **Persistence:** SQLite in the current development setup
-- **Focus:** security event handling, detection workflows, alert lifecycle, and operational visibility
-- **Status:** active development; the consolidated capability, verification and limitation record is maintained in ENGINEERING LAB at [docs/projects/AEGIS.md](docs/projects/AEGIS.md)
-
-| | |
-|---|---|
-| **Portfolio record** | [AEGIS project record](docs/projects/AEGIS.md): consolidated scope, technical snapshot, capability inventory, verification evidence and remaining work |
-| **Repository** | [aegis-security-platform](https://github.com/Nomusa990822/aegis-security-platform) |
-
 ### SENTINEL QA: Quality engineering platform
 
 SENTINEL QA is the next major planned product. It will explore maintainable automated testing across web interfaces, APIs, and performance workloads, with reproducible local and CI execution.
 
 - **Candidate technologies:** Java, Maven, Selenium, JUnit or TestNG, REST Assured, JMeter, and GitHub Actions
-- **First proposed integration:** test AEGIS through documented APIs and an isolated test environment
+- **Integration direction:** select a test target after discovery and contract review
 - **Status:** planned; discovery and design must precede implementation
 
 ---
@@ -181,23 +165,18 @@ flowchart TB
 
     subgraph PRODUCTS["&nbsp;INDEPENDENT PRODUCTS · own repository, data, tests and releases&nbsp;"]
         direction LR
-        A["<b>AEGIS</b><br/>active"]
         Q["<b>SENTINEL QA</b><br/>planned"]
         O["<b>Other catalogue<br/>projects</b><br/>directional"]
     end
 
     HUB -. "strategy and standards" .-> PRACTICES
     PRACTICES -. "conventions" .-> PRODUCTS
-    Q <-. "proposed integration<br/>documented APIs" .-> A
-    A <-. "APIs · events · webhooks" .-> O
 
     classDef hub    fill:#0f172a,stroke:#0f172a,color:#ffffff;
     classDef prac   fill:#e0f2fe,stroke:#0369a1,stroke-width:1.5px,color:#0f172a;
-    classDef active fill:#cffafe,stroke:#0891b2,stroke-width:2px,color:#0f172a;
     classDef plan   fill:#f1f5f9,stroke:#64748b,stroke-width:1.5px,stroke-dasharray: 5 3,color:#0f172a;
     class H1,H2,H3,H4,H5 hub;
     class P1,P2,P3,P4,P5 prac;
-    class A active;
     class Q,O plan;
     style HUB       fill:#f8fafc,stroke:#0f172a,stroke-width:1.5px
     style PRACTICES fill:#f0f9ff,stroke:#0369a1,stroke-width:1.5px
@@ -208,7 +187,7 @@ flowchart TB
 Products communicate through explicit, documented interfaces such as APIs, events, webhooks, or controlled data exchange. They do not share internal database tables by default.
 
 > [!NOTE]
-> Integrations described in the portfolio documents are proposals until implemented and verified. AEGIS remains an independent product with its own identity; the shared design system does not mandate a redesign of it.
+> Integrations described in the portfolio documents are proposals until implemented and verified.
 
 ---
 
@@ -244,14 +223,13 @@ The portfolio may use Python, Java, C#, JavaScript/TypeScript, Go, C/C++, Rust, 
 | [ENGINEERING-STANDARDS.md](ENGINEERING-STANDARDS.md) | Development lifecycle, code quality, testing, security, and definition of done |
 | [INTEGRATION-STRATEGY.md](INTEGRATION-STRATEGY.md) | API, event, webhook, security, and integration contract guidance |
 | [Project status dashboard](docs/PROJECT-STATUS.md) | Evidence-based status, milestones, blockers, and next actions |
-| [AEGIS project record](docs/projects/AEGIS.md) | Consolidated AEGIS scope, technical snapshot, capability inventory, verification ledger, limitations, and next actions |
 | [Project catalogue](docs/project-catalogue/README.md) | Scope and direction of the portfolio projects |
 | [ADR index](docs/decisions/README.md) | Architecture decision process and accepted decisions |
 | [Documentation templates](docs/templates/README.md) | Reusable project README, technical specification, feature tracker, and development log templates |
 | [Development log](docs/development-log/README.md) | Portfolio-level work history and evidence conventions |
 
 > [!IMPORTANT]
-> Product source code and product-runtime documentation belong in each independent product repository. ENGINEERING LAB maintains the portfolio-level AEGIS record at [docs/projects/AEGIS.md](docs/projects/AEGIS.md); do not place this portfolio record or its progress reports in the AEGIS product repository.
+> Product source code and product-runtime documentation belong in each independent product repository. This repository maintains portfolio-level strategy, standards, project status, and cross-project decisions.
 
 ---
 
@@ -296,7 +274,6 @@ engineering-lab/
     ├── project-catalogue/
     │   └── README.md
     ├── projects/
-    │   └── AEGIS.md
     └── templates/
         ├── README.md
         ├── PROJECT-README-TEMPLATE.md
