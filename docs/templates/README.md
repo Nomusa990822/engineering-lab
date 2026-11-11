@@ -28,4 +28,8 @@ Use these templates to make project documentation consistent without forcing eve
 - Use `docs/development-log/YYYY-MM-DD.md` for dated development entries.
 - Use Architecture Decision Records (ADRs) for decisions with meaningful long-term consequences. See [the ADR process](../decisions/README.md).
 
+## Portfolio-record exception for AEGIS
+
+AEGIS portfolio documentation, progress reports, consolidated feature/milestone tracking and verification summaries are maintained in ENGINEERING LAB at [docs/projects/AEGIS.md](../projects/AEGIS.md), with dated session evidence in the portfolio development log. Do not copy these portfolio records or instantiate the generic templates inside the AEGIS Security Platform repository for this purpose. The AEGIS product repository remains independent and is used for source code and its own runtime work.
+
 Templates are starting points, not mandatory paperwork. Prefer concise, current documentation over duplicated or stale documents.
