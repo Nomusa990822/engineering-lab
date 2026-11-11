@@ -49,4 +49,4 @@ Start from [the development log template](../templates/DEVELOPMENT-LOG-TEMPLATE.
 ## Entries
 
 - [2026-11-10.md](2026-11-10.md) — portfolio documentation and governance foundation.
-- [2026-11-11-aegis.md](2026-11-11-aegis.md) — AEGIS engineering checkpoint, verification evidence, limitations, and next actions. See the [consolidated AEGIS project record](../projects/AEGIS.md) for the current portfolio-level specification snapshot, capability inventory, milestone tracker and verification ledger.
+- [2026-11-11-aegis.md](2026-11-11-aegis.md) — AEGIS engineering checkpoint, including the 715-test result, live synthetic event-to-alert-to-investigation verification, limitations, and remaining operational actions. See the [consolidated AEGIS project record](../projects/AEGIS.md) for the current portfolio-level specification snapshot, capability inventory, milestone tracker and verification ledger.
