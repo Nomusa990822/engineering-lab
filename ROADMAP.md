@@ -20,7 +20,6 @@ The roadmap changes when evidence, learning, technical constraints, or project v
 | Item | Status | Evidence and qualification |
 |---|---|---|
 | ENGINEERING LAB hub | In Progress | Repository exists; core design, standards, architecture, and integration documents have been established |
-| AEGIS Security Platform | In Progress | Existing FastAPI-based educational security platform; 11 November follow-up records 715 passing backend tests and a live synthetic event-to-alert-to-investigation workflow with five linked evidence records and MITRE T1110.001 mapping, alongside the earlier container, persistence, database, authorization, dashboard and CI evidence; operational gaps remain |
 | SENTINEL QA | Planned | Intended next major product; not yet implemented |
 | All other catalogue projects | Planned | Concepts for future discovery; not yet implemented |
 
@@ -29,7 +28,7 @@ A status must reflect verified repository evidence. A document describing a futu
 ## 3. Delivery principles
 
 1. **Depth over quantity.** Prioritise three to five flagship products for substantial implementation and validation.
-2. **Preserve working systems.** Improve AEGIS without casually replacing working features or forcing it into another product's architecture.
+2. **Preserve working systems.** Improve existing products without casually replacing working features or forcing them into another product's architecture.
 3. **Build in vertical slices.** Each milestone should produce a working, testable increment.
 4. **Make quality visible.** Tests, security checks, architecture decisions, reproducible demonstrations, and honest limitations are part of the product.
 5. **Integrate through contracts.** Use documented APIs, events, or other explicit interfaces; do not couple independent products through shared database tables.
@@ -55,17 +54,9 @@ A status must reflect verified repository evidence. A document describing a futu
 - Planned work is visibly distinguished from implemented work.
 - Existing product repositories remain independent.
 
-### Phase 1 — AEGIS baseline and SENTINEL QA
+### Phase 1 — SENTINEL QA discovery
 
-**Objective:** Preserve AEGIS as the existing flagship while building a credible enterprise-grade QA automation platform.
-
-**AEGIS baseline**
-- Record the current working state and how to run it. **Checkpoint recorded 11 November 2026** in the [consolidated AEGIS portfolio record](docs/projects/AEGIS.md) and [dated development log](docs/development-log/2026-11-11-aegis.md).
-- The 10–11 November checkpoint records hardened container configuration, persistent SQLite data after restart, SQLite integrity and foreign-key checks, dependency consistency, selected API role outcomes, dashboard rendering and five successful latest CI workflows. The 11 November follow-up also records 715 passing backend tests and a live synthetic event-to-alert-to-investigation demonstration: five events, one high-severity `AEGIS-AUTH-001` alert, five linked evidence records, investigation note/timeline and MITRE `T1110.001` mapping.
-- Remaining verification: Codespaces port visibility, complete route-specific authorization matrix, exact test-revision/working-tree reconciliation, and a separate backup/restore exercise. Remote-device access remains to be reviewed safely.
-- Continue implementation and detailed product-level documentation in the independent AEGIS repository and its dedicated development conversation. ENGINEERING LAB records only portfolio status, milestones, and cross-project decisions.
-- Record known limitations and avoid unverified claims.
-- Do not redesign its visual identity as part of the shared portfolio work.
+**Objective:** Build a credible enterprise-grade QA automation platform through a carefully scoped, verifiable first release.
 
 **SENTINEL QA**
 - Candidate stack: Java, Maven, Selenium, JUnit or TestNG, REST Assured, PostgreSQL where persistence is justified, JMeter, Docker, and GitHub Actions.
@@ -73,15 +64,9 @@ A status must reflect verified repository evidence. A document describing a futu
 - Add browser automation, API contract checks, test data management, reporting, and performance testing in deliberate increments.
 - Make test execution reproducible locally and in CI.
 
-**First integration candidate**
-- SENTINEL QA may test AEGIS through its documented public API and supported test environment.
-- This is a proposed integration. It must not depend on AEGIS's internal database.
-- Establish test accounts, safe test data, environment isolation, cleanup, and explicit limits before running automated tests against AEGIS.
-
 **Exit criteria**
-- AEGIS baseline is documented and key workflows have repeatable verification.
 - SENTINEL QA has a documented architecture, runnable test framework, meaningful automated tests, CI execution, and readable reports.
-- Any AEGIS integration uses a documented contract and has integration tests.
+- Any future cross-project integration uses a documented contract and has integration tests.
 
 ### Phase 2 — Enterprise application engineering
 
@@ -107,7 +92,7 @@ A status must reflect verified repository evidence. A document describing a futu
 
 **VERITAS — Security and governance platform**
 - Discover the precise problem and boundary before selecting a stack.
-- Avoid duplicating AEGIS; focus on a clearly differentiated governance, policy, or compliance workflow if justified.
+- Avoid duplicating existing catalogue projects; focus on a clearly differentiated governance, policy, or compliance workflow if justified.
 
 **Exit criteria**
 - At least one enterprise application has a complete vertical slice from user interface through validated business logic and persistent data.
@@ -190,7 +175,6 @@ The catalogue below is a planning inventory, not a declaration that these produc
 
 | Project | Intended domain | Current status |
 |---|---|---|
-| AEGIS | Cybersecurity detection and response | In Progress |
 | SENTINEL QA | Quality engineering and test automation | Planned — next major build |
 | MERIDIAN | Enterprise business/financial services software | Planned |
 | ORBIT | Low-code workflow and application builder | Planned |
@@ -269,8 +253,6 @@ A weekly engineering build programme is scheduled for Mondays at 18:00 Africa/Jo
 ## 8. Integration direction
 
 Potential integrations are governed by INTEGRATION-STRATEGY.md and ARCHITECTURE.md. Examples include:
-- SENTINEL QA testing AEGIS through documented APIs.
-- AEGIS publishing selected security events to CHRONOS.
 - CHRONOS exposing event streams to OBSERVA.
 - NEBULA deploying selected independent products.
 - ORACLE indexing approved project documentation.
@@ -292,7 +274,6 @@ Keep a short record of material changes in docs/decisions. Update this roadmap w
 ## 10. Immediate next actions
 
 1. Review the portfolio documentation and tracking system for consistency.
-2. Verify the AEGIS repository baseline, including run instructions, tests, and current known limitations.
 3. Start SENTINEL QA discovery: problem statement, scope, architecture, toolchain, and first acceptance criteria.
 4. Build the first SENTINEL QA vertical slice only after its design is reviewed.
 
