@@ -9,7 +9,7 @@
 
 The portfolio contains or may contain multiple user-facing products. A consistent baseline for accessibility, typography, spacing, interaction states, and theme behaviour can improve quality and coherence. However, forcing every product to look identical would weaken product identity and may not suit each product's users or domain.
 
-AEGIS already has its own visual identity and should not be redesigned merely to match the portfolio hub.
+Products may retain established visual identities rather than being redesigned merely to match the portfolio hub.
 
 ## Decision drivers
 
@@ -56,7 +56,7 @@ Disadvantages:
 
 Maintain a shared design specification with both light and dark themes; dark is the default for the portfolio direction. Products may adopt the foundation where appropriate and retain distinct product identities and accent colours.
 
-The design document is a specification, not evidence that a shared component library or theme switch has been implemented across products. AEGIS remains independent and is not required to undergo a redesign.
+The design document is a specification, not evidence that a shared component library or theme switch has been implemented across products.
 
 ## Consequences
 
