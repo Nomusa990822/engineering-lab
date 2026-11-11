@@ -17,7 +17,7 @@
 
 AEGIS is an independently maintained cybersecurity detection and response platform. Its current development foundation uses Python, FastAPI, Pydantic, SQLite and a JavaScript/HTML/CSS dashboard. The system ingests and validates security events, applies detection rules, manages alerts and investigations, enriches threat context, and provides a controlled analyst/approver response workflow with dry-run simulation and audit evidence.
 
-The 10–11 November 2026 engineering checkpoint established useful evidence across container hardening, persistent storage, database integrity, dependency consistency, selected API authorization outcomes, dashboard rendering and automated CI workflows.
+The 10–11 November 2026 engineering checkpoint established evidence across container hardening, persistent storage, database integrity, dependency consistency, selected API authorization outcomes, dashboard rendering and automated CI workflows. A follow-up on 11 November also recorded 715 passing backend tests and verified a live synthetic event-to-alert-to-investigation path, including all five evidence links and the MITRE ATT&CK mapping.
 
 **Current assessment:** AEGIS is an active engineering project with substantial implemented functionality and several successful verification gates. It is not yet appropriate to describe it as production-ready, independently penetration-tested, disaster-recovery tested, or proven effective against real-world threats. Important operational and endpoint-specific checks remain open.
 
@@ -201,29 +201,40 @@ At product revision `8fb3972b255c96cda479b270d164adf3ce21f455`, the five latest 
 
 Successful workflow completion means those configured jobs completed successfully. It does not establish zero vulnerabilities, comprehensive penetration testing, or production readiness. The container configuration also documents a Trivy exception for CVE-2025-47273 associated with setuptools metadata in the upstream `python:3.14-slim` image; the final image removes setuptools package files and metadata and asserts that no setuptools distribution remains. This is a documented, scoped exception—not a claim that the upstream finding never existed—and it should be revisited if the base image or removal checks change.
 
-### 5.5 Local test-suite reconciliation
+### 5.5 Automated test results
 
-A local pytest command was previously attempted from the repository root and failed to import `app` because the backend package import path was not set by that working directory. This is not evidence that the suite itself fails.
+- Complete backend pytest suite: **715 passed**.
+- Focused response tests: **45 passed**.
+- Focused audit-related tests: **167 passed**.
 
-Run the complete suite from the backend directory when work resumes:
+The two focused results are subsets of the full suite and must not be added to the 715-test total. These results are already recorded; do not rerun pytest unless a source change or a specific regression gives a reason. The exact commit/working-tree association for the 715-test run should be reconciled before a future release or source modification.
 
-```bash
-cd /workspaces/aegis-security-platform/backend
-./.venv/bin/python -m pytest -q
-```
+### 5.6 Live event-to-investigation verification
 
-The exact full local pass/fail/skip counts for the current working tree have not yet been recorded.
+A read-only inspection of the running Docker service on 11 November 2026 confirmed the following synthetic demonstration workflow:
+
+| Check | Observed result | Qualification |
+|---|---|---|
+| `GET /api/v1/events?limit=5` | Five events returned | All were authentication failures from source system `aegis-demo` |
+| `GET /api/v1/alerts?limit=5` | One alert returned | High-severity `Brute Force Authentication Detection`, rule `AEGIS-AUTH-001` |
+| Detection threshold | Five failures within five minutes | Alert description and source/account values matched the event sequence |
+| `GET /api/v1/alerts/1/investigation` | Investigation details returned | Five of five underlying events were linked as evidence |
+| MITRE ATT&CK enrichment | Mapped to `T1110.001 — Password Guessing` | Parent technique `T1110`, tactic `Credential Access` (`TA0006`) |
+| Investigation record | Note and timeline returned | Analyst actions, status changes, evidence links and investigation note were present |
+| Current alert status | `investigating` | Timeline also retained the earlier resolved and reopened transitions |
+
+**Safety and scope:** These were synthetic demonstration events from `aegis-demo`, using reserved documentation IP `198.51.100.42`. This verifies the controlled demonstration path, not detection against real malicious traffic or real-world detection efficacy. The inspection was read-only and did not create new events or modify the alert.
 
 ## 6. Milestone tracker
 
 | ID | Milestone | Status | Completion evidence / remaining work |
 |---|---|---|---|
 | AEGIS-M01 | Core application and dashboard foundation | In Progress | Backend, SQLite and dashboard are present; continue to preserve working functionality |
-| AEGIS-M02 | Event ingestion, detection and alert workflow | In Progress | Relevant components and ten detection rules are present; complete current regression verification |
+| AEGIS-M02 | Event ingestion, detection and alert workflow | In Progress | Five synthetic authentication failures produced the expected high-severity alert; all five events were linked to its investigation, with MITRE T1110.001 mapping and timeline evidence. Broader detection efficacy remains unmeasured |
 | AEGIS-M03 | Threat context and controlled response workflow | In Progress | Enrichment, analyst/approver separation, policy checks and dry-run capability are present; expand route-specific and negative-path verification |
 | AEGIS-M04 | Container hardening and persistent runtime | In Progress | Key controls configured and observed; add backup/restore and operational runbook evidence |
 | AEGIS-M05 | CI quality and security baseline | In Progress | Five latest workflows succeeded at inspected revision; review findings and maintain repeatability |
-| AEGIS-M06 | Operational verification and recovery | Planned / outstanding | Port exposure review, full authorization matrix, local test reconciliation, working-tree check, backup/restore and remote-access test remain |
+| AEGIS-M06 | Operational verification and recovery | Planned / outstanding | Port exposure review, full authorization matrix, tested-revision/working-tree reconciliation, independent backup/restore and remote-access test remain |
 
 A milestone is not marked Complete merely because its implementation exists. Acceptance requires current evidence for its defined scope.
 
@@ -234,8 +245,8 @@ Resume in the dedicated AEGIS development conversation. Work through this list i
 1. **Reconcile the working tree before changes.** Inspect `git status --short` and `git log -1 --oneline`; identify any uncommitted work and preserve it.
 2. **Review Codespaces port visibility.** Inspect port 8000 visibility and retain private access unless an intentional, justified review requires otherwise.
 3. **Complete endpoint-specific authorization checks.** For investigation and response routes, test no token, analyst credentials and approver credentials. Record HTTP method, path, expected status, actual status and response assertion. Do not expose credentials in logs.
-4. **Run the full local backend suite.** Use the backend working directory and record exact pass/fail/skip counts and the commit or working-tree state tested.
-5. **Perform a backup-and-restore exercise.** Create a backup, restore it into a separate clean target, verify database integrity and representative records, and document the procedure and result.
+4. **Reconcile the test result to a source revision.** The full backend suite has already passed (715 tests); do not rerun it without a source change or specific regression. Confirm which commit/working-tree state the recorded result represents when the working tree is next inspected.
+5. **Perform a backup-and-restore exercise.** Create a backup, restore it into a separate clean target, verify database integrity and representative records, and document the procedure and result. A persistent Docker volume is not an independent backup.
 6. **Test intended remote-device access safely.** Confirm that access works as intended without weakening authentication, authorization or network exposure controls.
 7. **Capture genuine dashboard evidence where useful.** Use actual application screenshots; label the date/revision and do not substitute mock-ups.
 8. **Reconcile this portfolio record.** Update only after the corresponding work has actually been performed and evidence is available.
@@ -246,7 +257,7 @@ Resume in the dedicated AEGIS development conversation. Work through this list i
 |---|---|---|---|
 | R-01 | API authorization coverage is incomplete in the retained evidence | A role check on selected endpoints cannot establish all route permissions | Complete the route matrix |
 | R-02 | Backup/restore has not been demonstrated | Persistence after restart is not disaster recovery | Run and document restore test |
-| R-03 | Local full-suite result is not retained | CI success does not replace a current local result when reconciling the working tree | Run suite from backend directory |
+| R-03 | Exact source revision for the retained local test result is not recorded | 715 backend tests passed, but the tested commit/working-tree state must be tied to the result | Reconcile test evidence against the next working-tree inspection; rerun only if justified |
 | R-04 | Codespaces port exposure has not been fully reconciled | Remote accessibility could unintentionally widen exposure | Inspect visibility and access controls |
 | R-05 | Real response execution is not established | Do not claim live containment or remediation | Keep testing in simulation unless explicitly designed and authorized |
 | R-06 | Detection efficacy is not measured | Rules existing does not prove real-world accuracy | Build a controlled labelled evaluation dataset before making efficacy claims |
