@@ -20,9 +20,8 @@
 
 | Project | Status | Current milestone | Blockers / dependencies | Latest evidence | Next action |
 |---|---|---|---|---|---|
-| ENGINEERING LAB | In Progress | Portfolio documentation consistency | None recorded | Core documentation, templates, ADRs, project catalogue, status dashboard and AEGIS consolidated record are linked from the hub | Maintain consistency as projects and milestones change |
-| AEGIS | In Progress | Baseline verification and operational hardening ([consolidated AEGIS record](projects/AEGIS.md)) | Port visibility review, endpoint-specific authorization matrix, tested-revision reconciliation, backup/restore evidence and remote-access review | 11 Nov checkpoint: 715 backend tests passed; five synthetic authentication failures were retrieved and correlated into one high-severity `AEGIS-AUTH-001` alert; all five events were linked in the investigation, with `T1110.001` mapping, analyst note and timeline. Earlier evidence also covers container hardening, persistent SQLite, database integrity, dependency consistency, selected role outcomes, dashboard rendering and five successful CI workflows | Continue only the outstanding checks in the dedicated AEGIS workspace; do not repeat the passing suite or already verified runtime checks without a source change or specific reason |
-| SENTINEL QA | Planned | Discovery and technical specification | AEGIS API contract should be reviewed before integration testing is designed | No implementation recorded in this portfolio tracker | Define MVP scope, architecture and acceptance criteria |
+| ENGINEERING LAB | In Progress | Portfolio documentation consistency | None recorded | Core documentation, templates, ADRs, project catalogue and status dashboard are linked from the hub | Maintain consistency as projects and milestones change |
+| SENTINEL QA | Planned | Discovery and technical specification | Integration targets and contracts should be selected during discovery | No implementation recorded in this portfolio tracker | Define MVP scope, architecture and acceptance criteria |
 | MERIDIAN | Planned | Discovery | Depends on requirements and technology selection | No implementation recorded in this portfolio tracker | Write problem statement and domain model |
 | ORBIT | Planned | Discovery | Clarify boundary with FLOWSTATE | No implementation recorded in this portfolio tracker | Define the visual builder's distinct scope |
 | All other catalogue projects | Planned | Not scheduled | Prioritisation and capacity | Catalogue entries only | Promote a project only when it is selected for active work |
@@ -64,7 +63,6 @@ For every meaningful status change:
 ## Current priorities
 
 1. Complete the repository-wide documentation consistency review.
-2. Resume AEGIS verification from the [consolidated AEGIS record](projects/AEGIS.md), without repeating checks already supported by evidence.
 3. Define SENTINEL QA as the next major new product, beginning with discovery and a testable MVP.
 4. Select further products based on learning value, feasibility and available time.
 
@@ -74,5 +72,4 @@ For every meaningful status change:
 |---|---|
 | 2026-11-10 | Initial portfolio status dashboard created from the verified documentation foundation and known project context. |
 | 2026-11-10 | Homepage navigation and roadmap status vocabulary aligned with the tracking system. |
-| 2026-11-11 | Recorded the AEGIS 10–11 November engineering checkpoint and created a consolidated AEGIS project record in ENGINEERING LAB, linking the technical snapshot, feature inventory, verification ledger and remaining work. AEGIS implementation remains in its independent repository and dedicated development conversation. |
 | 2026-11-11 | Added the 715-test result and live synthetic event-to-alert-to-investigation evidence, including five linked events, MITRE T1110.001 mapping, investigation note and timeline. Retained the outstanding backup/restore, route-matrix and port-visibility limitations. |
