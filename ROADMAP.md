@@ -20,7 +20,7 @@ The roadmap changes when evidence, learning, technical constraints, or project v
 | Item | Status | Evidence and qualification |
 |---|---|---|
 | ENGINEERING LAB hub | In Progress | Repository exists; core design, standards, architecture, and integration documents have been established |
-| AEGIS Security Platform | In Progress | Existing FastAPI-based educational security platform; 10–11 November checkpoint records container hardening, persistence and database checks, selected API authorization outcomes, dashboard verification, and five successful latest CI workflows; outstanding operational checks remain |
+| AEGIS Security Platform | In Progress | Existing FastAPI-based educational security platform; 11 November follow-up records 715 passing backend tests and a live synthetic event-to-alert-to-investigation workflow with five linked evidence records and MITRE T1110.001 mapping, alongside the earlier container, persistence, database, authorization, dashboard and CI evidence; operational gaps remain |
 | SENTINEL QA | Planned | Intended next major product; not yet implemented |
 | All other catalogue projects | Planned | Concepts for future discovery; not yet implemented |
 
@@ -61,8 +61,8 @@ A status must reflect verified repository evidence. A document describing a futu
 
 **AEGIS baseline**
 - Record the current working state and how to run it. **Checkpoint recorded 11 November 2026** in the [consolidated AEGIS portfolio record](docs/projects/AEGIS.md) and [dated development log](docs/development-log/2026-11-11-aegis.md).
-- A 10–11 November verification checkpoint has been recorded: hardened container configuration, persistent SQLite data after restart, SQLite integrity and foreign-key checks, dependency consistency, selected API role outcomes, dashboard rendering, and five successful latest CI workflows.
-- Remaining verification: Codespaces port visibility, complete route-specific authorization matrix, local full-suite results from the current working tree, working-tree reconciliation, and backup/restore exercise.
+- The 10–11 November checkpoint records hardened container configuration, persistent SQLite data after restart, SQLite integrity and foreign-key checks, dependency consistency, selected API role outcomes, dashboard rendering and five successful latest CI workflows. The 11 November follow-up also records 715 passing backend tests and a live synthetic event-to-alert-to-investigation demonstration: five events, one high-severity `AEGIS-AUTH-001` alert, five linked evidence records, investigation note/timeline and MITRE `T1110.001` mapping.
+- Remaining verification: Codespaces port visibility, complete route-specific authorization matrix, exact test-revision/working-tree reconciliation, and a separate backup/restore exercise. Remote-device access remains to be reviewed safely.
 - Continue implementation and detailed product-level documentation in the independent AEGIS repository and its dedicated development conversation. ENGINEERING LAB records only portfolio status, milestones, and cross-project decisions.
 - Record known limitations and avoid unverified claims.
 - Do not redesign its visual identity as part of the shared portfolio work.
