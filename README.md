@@ -41,7 +41,7 @@ AEGIS is the existing flagship project: an educational security platform built a
 - Backend foundation: Python and FastAPI.
 - Persistence: SQLite in the current development setup.
 - Focus: security event handling, detection workflows, alert lifecycle, and operational visibility.
-- Status: active development; capabilities and limitations are documented in its own repository.
+- Status: active development; the consolidated capability, verification and limitation record is maintained in ENGINEERING LAB at [docs/projects/AEGIS.md](docs/projects/AEGIS.md).
 
 **Portfolio record:** [AEGIS project record](docs/projects/AEGIS.md) — consolidated scope, technical snapshot, capability inventory, verification evidence and remaining work.  
 **Repository:** [aegis-security-platform](https://github.com/Nomusa990822/aegis-security-platform)
