@@ -15,20 +15,20 @@ Each product should remain independently understandable and independently deploy
 
 | Priority | Project | Status | Intended focus |
 |---|---|---|---|
-| 2 | SENTINEL QA | Planned — next major build | Automated quality engineering |
-| 3 | MERIDIAN | Planned | Enterprise business and financial-services workflows |
-| 4 | ORBIT | Planned | Visual low-code application and workflow builder |
-| 5 | FORGE | Planned | Programming language and compiler foundations |
-| 6 | NEXUS | Planned | Relational database internals |
-| 7 | GITFORGE | Planned | Version-control internals |
-| 8 | CHRONOS | Planned | Event streaming and messaging |
-| 9 | OBSERVA | Planned | Observability and site reliability engineering |
-| 10 | ATLAS | Planned | Distributed task execution and orchestration |
-| 11 | NEBULA | Planned | Deployment and internal developer platform |
-| 12 | CORTEX | Planned | Controlled multi-agent AI platform |
-| 13 | ORACLE | Planned | Document knowledge and retrieval |
-| 14 | SYNAPSE | Planned | Machine-learning lifecycle operations |
-| 15 | Specialist systems | Planned | Computational, scientific, and systems projects |
+| 1 | SENTINEL QA | Planned — next major build | Automated quality engineering |
+| 2 | MERIDIAN | Planned | Enterprise business and financial-services workflows |
+| 3 | ORBIT | Planned | Visual low-code application and workflow builder |
+| 4 | FORGE | Planned | Programming language and compiler foundations |
+| 5 | NEXUS | Planned | Relational database internals |
+| 6 | GITFORGE | Planned | Version-control internals |
+| 7 | CHRONOS | Planned | Event streaming and messaging |
+| 8 | OBSERVA | Planned | Observability and site reliability engineering |
+| 9 | ATLAS | Planned | Distributed task execution and orchestration |
+| 10 | NEBULA | Planned | Deployment and internal developer platform |
+| 11 | CORTEX | Planned | Controlled multi-agent AI platform |
+| 12 | ORACLE | Planned | Document knowledge and retrieval |
+| 13 | SYNAPSE | Planned | Machine-learning lifecycle operations |
+| 14 | Specialist systems | Planned | Computational, scientific, and systems projects |
 
 Priority is a suggested sequence, not a deadline. Reassess it at milestone boundaries using prerequisites, learning value, available time, and maintenance cost.
 
@@ -63,9 +63,6 @@ A reusable quality engineering platform demonstrating automated verification acr
 **First milestone direction**
 
 Create a small Java/Maven project with a clean test structure, configuration management, one representative API test suite, and repeatable local execution. Add CI after local execution is reliable.
-
-**Proposed integration**
-
 
 **Repository:** to be created after discovery and initial scope approval.
 
