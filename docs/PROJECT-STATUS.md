@@ -63,7 +63,7 @@ For every meaningful status change:
 ## Current priorities
 
 1. Complete the repository-wide documentation consistency review.
-3. Define SENTINEL QA as the next major new product, beginning with discovery and a testable MVP.
+2. Define SENTINEL QA as the next major new product, beginning with discovery and a testable MVP.
 4. Select further products based on learning value, feasibility and available time.
 
 ## Change history
@@ -72,4 +72,3 @@ For every meaningful status change:
 |---|---|
 | 2026-11-10 | Initial portfolio status dashboard created from the verified documentation foundation and known project context. |
 | 2026-11-10 | Homepage navigation and roadmap status vocabulary aligned with the tracking system. |
-| 2026-11-11 | Added the 715-test result and live synthetic event-to-alert-to-investigation evidence, including five linked events, MITRE T1110.001 mapping, investigation note and timeline. Retained the outstanding backup/restore, route-matrix and port-visibility limitations. |
