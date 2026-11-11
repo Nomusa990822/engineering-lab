@@ -135,7 +135,7 @@ A common event envelope may contain:
   "event_type": "security.alert.created",
   "schema_version": "1.0",
   "occurred_at": "2026-11-10T12:00:00Z",
-  "producer": "aegis",
+  "producer": "service-name",
   "correlation_id": "corr_01HXYZ...",
   "data": {
     "alert_reference": "alert-reference"
@@ -331,20 +331,16 @@ The following are candidates for future work, not implemented integrations.
 
 | Producer | Consumer | Candidate workflow | Initial approach |
 |---|---|---|---|
-| SENTINEL QA | AEGIS | Run API and workflow tests against AEGIS | Test-only API access and reports |
-| AEGIS | CHRONOS | Publish selected security events | Versioned event schema |
 | CHRONOS | OBSERVA | Monitor stream processing health | Metrics and telemetry |
 | OBSERVA | ATLAS | Request an approved operational task | Authenticated API with approval |
 | NEBULA | Product repositories | Standardise deployment workflows | CI/CD interface |
 | ORBIT | MERIDIAN | Submit an approved business workflow | Versioned REST API |
-| CORTEX | AEGIS | Provide analyst-assistance context | Read-only scoped API and human review |
 | ORACLE | Project documentation | Index and retrieve technical knowledge | Controlled document ingestion |
 
 ### Recommended implementation order
 
 Start with the smallest integration that provides measurable value and has a low blast radius.
 
-A sensible first candidate is **SENTINEL QA testing AEGIS through its documented API**. It provides practical contract and end-to-end testing experience without requiring a production event broker or cross-product write permissions.
 
 A later event-driven integration can be considered after a concrete use case demonstrates the need for asynchronous delivery.
 
