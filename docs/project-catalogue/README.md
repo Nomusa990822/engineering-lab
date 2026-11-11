@@ -15,7 +15,6 @@ Each product should remain independently understandable and independently deploy
 
 | Priority | Project | Status | Intended focus |
 |---|---|---|---|
-| 1 | AEGIS | Active | Defensive security event detection and response |
 | 2 | SENTINEL QA | Planned — next major build | Automated quality engineering |
 | 3 | MERIDIAN | Planned | Enterprise business and financial-services workflows |
 | 4 | ORBIT | Planned | Visual low-code application and workflow builder |
@@ -35,40 +34,7 @@ Priority is a suggested sequence, not a deadline. Reassess it at milestone bound
 
 ---
 
-## 1. AEGIS — Security Detection and Response Platform
-
-<badge color="success">Active</badge>
-
-**Purpose**
-
-A defensive security platform for ingesting security events, applying detection rules, managing alerts, and presenting operational information through a dashboard.
-
-**Current technical direction**
-- Python and FastAPI backend.
-- Pydantic data validation.
-- SQLite in the current development setup.
-- JavaScript dashboard.
-- Automated tests and security/dependency checks as part of ongoing quality work.
-
-**Core engineering challenges**
-- Event schemas and validation.
-- Detection-rule evaluation.
-- Alert lifecycle and auditability.
-- API design and error handling.
-- Safe configuration and secret management.
-- Dashboard data visualisation and usability.
-
-**Evidence of progress**
-
-The existing product repository has a working dashboard and exercised alert workflows. This does not imply production readiness; the consolidated AEGIS capability, limitation and verification record is maintained in [ENGINEERING LAB](../projects/AEGIS.md).
-
-**Future integration opportunities**
-- SENTINEL QA may exercise documented AEGIS APIs in an isolated test environment.
-- AEGIS may publish selected events to CHRONOS after an explicit event contract is designed.
-
-**Repository:** [aegis-security-platform](https://github.com/Nomusa990822/aegis-security-platform)
-
-## 2. SENTINEL QA — Quality Engineering Platform
+## 1. SENTINEL QA — Quality Engineering Platform
 
 <badge>Planned · next major build</badge>
 
@@ -100,11 +66,10 @@ Create a small Java/Maven project with a clean test structure, configuration man
 
 **Proposed integration**
 
-Use SENTINEL QA to test AEGIS through documented APIs only. Use a dedicated test environment, synthetic data, explicit test credentials, and safe cleanup. Do not couple the test suite to AEGIS's SQLite database.
 
 **Repository:** to be created after discovery and initial scope approval.
 
-## 3. MERIDIAN — Enterprise Business and Financial Services Platform
+## 2. MERIDIAN — Enterprise Business and Financial Services Platform
 
 <badge>Planned</badge>
 
@@ -134,7 +99,7 @@ ORBIT could eventually submit approved workflows to MERIDIAN through a documente
 
 **Repository:** to be created after discovery.
 
-## 4. ORBIT — Visual Low-Code Application and Workflow Builder
+## 3. ORBIT — Visual Low-Code Application and Workflow Builder
 
 <badge>Planned</badge>
 
@@ -166,7 +131,7 @@ FLOWSTATE may overlap with ORBIT. During discovery, decide whether durable proce
 
 **Repository:** to be created after discovery.
 
-## 5. FLOWSTATE — Business Process Automation Engine
+## 4. FLOWSTATE — Business Process Automation Engine
 
 <badge color="warning">Discovery required</badge>
 
@@ -192,7 +157,7 @@ Determine whether FLOWSTATE should be a standalone execution engine or a subsyst
 
 **Repository:** not yet justified; decide after discovery.
 
-## 6. APEX — API Management and Integration Platform
+## 5. APEX — API Management and Integration Platform
 
 <badge>Planned</badge>
 
@@ -214,7 +179,7 @@ Go, Java, or Python selected after comparing gateway performance, concurrency, e
 
 **Repository:** to be created after discovery.
 
-## 7. VERITAS — Security Governance and Policy Platform
+## 6. VERITAS — Security Governance and Policy Platform
 
 <badge color="warning">Discovery required</badge>
 
@@ -231,11 +196,10 @@ Potentially explore security governance, policy management, evidence tracking, a
 
 **Boundary to resolve**
 
-Define how VERITAS differs from AEGIS. AEGIS focuses on defensive event detection and response; VERITAS should only proceed if a distinct governance problem is identified.
 
 **Repository:** not yet justified; decide after discovery.
 
-## 8. QUANTUM TEST LAB — Distributed Performance and Reliability Testing
+## 7. QUANTUM TEST LAB — Distributed Performance and Reliability Testing
 
 <badge>Planned</badge>
 
@@ -257,7 +221,7 @@ A language and execution model selected after defining workload orchestration, w
 
 **Repository:** to be created after discovery.
 
-## 9. FORGE — Programming Language and Compiler
+## 8. FORGE — Programming Language and Compiler
 
 <badge>Planned</badge>
 
@@ -283,7 +247,7 @@ A small expression language with variables, arithmetic, functions, and useful er
 
 **Repository:** to be created after discovery.
 
-## 10. NEXUS — Relational Database Engine
+## 9. NEXUS — Relational Database Engine
 
 <badge>Planned</badge>
 
@@ -309,7 +273,7 @@ A durable key-value or record store with a documented file format and tests befo
 
 **Repository:** to be created after discovery.
 
-## 11. GITFORGE — Version Control Engine
+## 10. GITFORGE — Version Control Engine
 
 <badge>Planned</badge>
 
@@ -335,7 +299,7 @@ A local command-line tool that stores file snapshots and can inspect history. Do
 
 **Repository:** to be created after discovery.
 
-## 12. SENTINEL CODE — Static Analysis and Code Quality
+## 11. SENTINEL CODE — Static Analysis and Code Quality
 
 <badge>Planned</badge>
 
@@ -357,7 +321,7 @@ Python or TypeScript initially, with language-specific parsers selected for the 
 
 **Repository:** to be created after discovery.
 
-## 13. CHRONOS — Event Streaming Platform
+## 12. CHRONOS — Event Streaming Platform
 
 <badge>Planned</badge>
 
@@ -379,11 +343,10 @@ Go or Java.
 
 **Potential integration**
 
-AEGIS may publish a deliberately limited set of security events, and OBSERVA may consume operational telemetry. Both are future proposals.
 
 **Repository:** to be created after discovery.
 
-## 14. OBSERVA — Observability and SRE Platform
+## 13. OBSERVA — Observability and SRE Platform
 
 <badge>Planned</badge>
 
@@ -405,7 +368,7 @@ OpenTelemetry-compatible instrumentation and collectors, with storage and visual
 
 **Repository:** to be created after discovery.
 
-## 15. ATLAS — Distributed Computing and Orchestration
+## 14. ATLAS — Distributed Computing and Orchestration
 
 <badge>Planned</badge>
 
@@ -427,7 +390,7 @@ Go or Python, with a relational store and message transport selected according t
 
 **Repository:** to be created after discovery.
 
-## 16. NEBULA — Cloud Deployment and Developer Platform
+## 15. NEBULA — Cloud Deployment and Developer Platform
 
 <badge>Planned</badge>
 
@@ -453,7 +416,7 @@ NEBULA may deploy selected portfolio products once their deployment requirements
 
 **Repository:** to be created after discovery.
 
-## 17. CORTEX — Multi-Agent AI Platform
+## 16. CORTEX — Multi-Agent AI Platform
 
 <badge>Planned</badge>
 
@@ -475,7 +438,7 @@ Python, model/provider adapters, structured tool interfaces, and an evaluation f
 
 **Repository:** to be created after discovery.
 
-## 18. ORACLE — Document Knowledge and Retrieval Platform
+## 17. ORACLE — Document Knowledge and Retrieval Platform
 
 <badge>Planned</badge>
 
@@ -497,7 +460,7 @@ Python, document parsers, search infrastructure, optional vector retrieval, and 
 
 **Repository:** to be created after discovery.
 
-## 19. SYNAPSE — MLOps Platform
+## 18. SYNAPSE — MLOps Platform
 
 <badge>Planned</badge>
 
@@ -519,7 +482,7 @@ Python and carefully selected experiment-tracking, model-packaging, and serving 
 
 **Repository:** to be created after discovery.
 
-## 20. PHOENIX — Educational Operating System and Kernel
+## 19. PHOENIX — Educational Operating System and Kernel
 
 <badge>Planned</badge>
 
@@ -545,7 +508,7 @@ Start in an emulator. Do not experiment on the user's primary device or physical
 
 **Repository:** to be created after discovery.
 
-## 21. VELOCITY — High-Performance Computing and Simulation
+## 20. VELOCITY — High-Performance Computing and Simulation
 
 <badge>Planned</badge>
 
@@ -567,7 +530,7 @@ C++, Rust, or Python with native numerical libraries depending on the problem.
 
 **Repository:** to be created after discovery.
 
-## 22. HELIOS — Energy Management and Optimisation
+## 21. HELIOS — Energy Management and Optimisation
 
 <badge>Planned</badge>
 
@@ -589,7 +552,7 @@ Python, optimisation libraries, time-series processing, and a web interface if i
 
 **Repository:** to be created after discovery.
 
-## 23. AURORA — Digital Twin and Simulation Platform
+## 22. AURORA — Digital Twin and Simulation Platform
 
 <badge>Planned</badge>
 
@@ -611,7 +574,7 @@ Selected after choosing a bounded domain and fidelity target; may combine simula
 
 **Repository:** to be created after discovery.
 
-## 24. POLARIS — Geospatial Intelligence Platform
+## 23. POLARIS — Geospatial Intelligence Platform
 
 <badge>Planned</badge>
 
@@ -633,7 +596,7 @@ Python, PostgreSQL/PostGIS, geospatial libraries, and a web mapping interface.
 
 **Repository:** to be created after discovery.
 
-## 25. QUANTUM — Quantum Computing Simulator
+## 24. QUANTUM — Quantum Computing Simulator
 
 <badge>Planned</badge>
 
