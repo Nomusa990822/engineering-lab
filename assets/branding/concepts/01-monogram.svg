@@ -1,14 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
-<title id="title">Concept 01 — Monogram</title><desc id="desc">Minimal original Engineering Lab emblem concept.</desc>
-<style>
-:root{color-scheme:dark;--ink:#E8EEF5;--muted:#94A3B8;--line:#334155;--accent:#2F80FF;--accent2:#60A5FA}
-@media(prefers-color-scheme:light){:root{color-scheme:light;--ink:#0F172A;--muted:#475569;--line:#CBD5E1;--accent:#2563EB;--accent2:#1D4ED8}}
-svg[data-theme="dark"]{--ink:#E8EEF5;--muted:#94A3B8;--line:#334155;--accent:#2F80FF;--accent2:#60A5FA}
-svg[data-theme="light"]{--ink:#0F172A;--muted:#475569;--line:#CBD5E1;--accent:#2563EB;--accent2:#1D4ED8}
-.stroke{fill:none;stroke:var(--ink);stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
-.accent{fill:none;stroke:var(--accent);stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
-.fill{fill:var(--accent)}
-</style>
-<path class="stroke" d="M48 38H112M48 38V122M48 80H94M48 122H112"/><path class="accent" d="M112 38V122M94 80H112"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 160 160"
+  role="img"
+  aria-labelledby="engineering-lab-monogram-title engineering-lab-monogram-description"
+  id="engineering-lab-monogram"
+  data-theme="auto">
+
+  <title id="engineering-lab-monogram-title">Engineering Lab — EL Monogram</title>
+  <desc id="engineering-lab-monogram-description">
+    A minimal geometric monogram formed from the letters E and L.
+    The E uses the primary ink colour and the L uses the Engineering Lab blue accent.
+  </desc>
+
+  <style>
+    /*
+     * Minimal EL monogram.
+     * No frame, orbit, nodes, gradients or decorative paths.
+     * Dark is the default; explicit data-theme values override it.
+     */
+    #engineering-lab-monogram {
+      --el-ink: #E8EEF5;
+      --el-accent: #2F80FF;
+    }
+
+    @media (prefers-color-scheme: light) {
+      #engineering-lab-monogram:not([data-theme="dark"]) {
+        --el-ink: #0F172A;
+        --el-accent: #2563EB;
+      }
+    }
+
+    #engineering-lab-monogram[data-theme="dark"] {
+      --el-ink: #E8EEF5;
+      --el-accent: #2F80FF;
+    }
+
+    #engineering-lab-monogram[data-theme="light"] {
+      --el-ink: #0F172A;
+      --el-accent: #2563EB;
+    }
+
+    .letter {
+      fill: none;
+      stroke-width: 10;
+      stroke-linecap: square;
+      stroke-linejoin: miter;
+    }
+
+    .letter-e {
+      stroke: var(--el-ink);
+    }
+
+    .letter-l {
+      stroke: var(--el-accent);
+    }
+  </style>
+
+  <!-- E: one vertical spine and three measured horizontal arms. -->
+  <path class="letter letter-e" d="
+    M 42 42
+    V 118
+    M 42 42 H 82
+    M 42 80 H 72
+    M 42 118 H 82
+  "/>
+
+  <!-- L: a single right angle, aligned to the E's top and baseline. -->
+  <path class="letter letter-l" d="
+    M 102 42
+    V 118
+    H 132
+  "/>
 </svg>
