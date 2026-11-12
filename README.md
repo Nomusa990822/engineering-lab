@@ -9,9 +9,9 @@
 <br/>
 
 <p align="center">
-  <img alt="Portfolio hub" src="https://img.shields.io/badge/PORTFOLIO-HUB-0f172a?style=for-the-badge&logo=github&logoColor=8ef1e5" />
-  <img alt="Next planned: SENTINEL QA" src="https://img.shields.io/badge/NEXT%20PLANNED-SENTINEL%20QA-1e293b?style=for-the-badge&logo=githubactions&logoColor=7c9cff" />
-  <img alt="Status is evidence-based" src="https://img.shields.io/badge/STATUS-EVIDENCE--BASED-1e293b?style=for-the-badge&logo=target&logoColor=7c9cff" />
+  <img alt="Portfolio hub" src="https://img.shields.io/badge/PORTFOLIO-HUB-0f172a?style=for-the-badge" />
+  <img alt="Next planned: SENTINEL QA" src="https://img.shields.io/badge/NEXT%20PLANNED-SENTINEL%20QA-1e293b?style=for-the-badge" />
+  <img alt="Status is evidence-based" src="https://img.shields.io/badge/STATUS-EVIDENCE--BASED-1e293b?style=for-the-badge" />
 </p>
 
 [**About**](#about) · [**Portfolio**](#portfolio-at-a-glance) · [**Current Work**](#current-work) · [**Approach**](#engineering-approach) · [**Architecture**](#architecture) · [**Documentation**](#documentation) · [**Status**](#project-status)
