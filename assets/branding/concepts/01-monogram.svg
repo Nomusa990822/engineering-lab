@@ -51,21 +51,12 @@
     }
   </style>
 
-  <!-- E: a continuous squared path with a measured central arm. -->
+  <!-- E: one vertical spine with three squared horizontal arms. -->
   <path class="monogram" d="
-    M 82 42
-    H 190
-    V 74
-    H 116
-    V 104
-    H 158
-    V 136
-    H 116
-    V 166
-    H 190
-    V 198
-    H 82
-    Z
+    M 82 42 H 190
+    M 82 42 V 198
+    M 82 120 H 158
+    M 82 198 H 190
   "/>
 
   <!-- L: an independent outer stroke with a chamfered upper terminal. -->
