@@ -69,7 +69,7 @@ Each product has its own purpose, repository, architecture, and release lifecycl
 
 ### AEGIS: Security detection and response platform
 
-AEGIS is an existing independent product in active verification and hardening. Its implementation remains in its own repository; ENGINEERING LAB records portfolio-level milestones and outstanding verification in the [11 November AEGIS development log](docs/development-log/2026-11-11-aegis.md).
+AEGIS is an existing independent product in active verification and hardening. Its implementation remains in its own repository; ENGINEERING LAB records portfolio-level milestones and outstanding verification in the [12 November AEGIS development log](docs/development-log/2026-11-12-aegis.md).
 
 ### SENTINEL QA: Quality engineering platform
 
@@ -228,7 +228,7 @@ The portfolio may use Python, Java, C#, JavaScript/TypeScript, Go, C/C++, Rust, 
 | [ENGINEERING-STANDARDS.md](ENGINEERING-STANDARDS.md) | Development lifecycle, code quality, testing, security, and definition of done |
 | [INTEGRATION-STRATEGY.md](INTEGRATION-STRATEGY.md) | API, event, webhook, security, and integration contract guidance |
 | [Project status dashboard](docs/PROJECT-STATUS.md) | Evidence-based status, milestones, blockers, and next actions |
-| [AEGIS development log](docs/development-log/2026-11-11-aegis.md) | Consolidated 11 November AEGIS work, verification evidence, stopping point and next-session plan |
+| [AEGIS development log](docs/development-log/2026-11-12-aegis.md) | Consolidated AEGIS IAM, recovery, deployment verification, evidence and next-session plan (12 November 2026) |
 | [Project catalogue](docs/project-catalogue/README.md) | Scope and direction of the portfolio projects |
 | [ADR index](docs/decisions/README.md) | Architecture decision process and accepted decisions |
 | [Documentation templates](docs/templates/README.md) | Reusable project README, technical specification, feature tracker, and development log templates |

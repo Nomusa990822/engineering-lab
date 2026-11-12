@@ -3,7 +3,7 @@
 **Portfolio:** ENGINEERING LAB  
 **Tagline:** SOFTWARE · SYSTEMS · INTELLIGENCE · RESEARCH  
 **Roadmap type:** Living strategy and delivery plan  
-**Last updated:** 11 November 2026
+**Last updated:** 12 November 2026
 
 ---
 
@@ -20,7 +20,7 @@ The roadmap changes when evidence, learning, technical constraints, or project v
 | Item | Status | Evidence and qualification |
 |---|---|---|
 | ENGINEERING LAB hub | In Progress | Repository exists; core design, standards, architecture, and integration documents have been established |
-| AEGIS | In Progress — existing independent product | Continue verification and operational hardening in its own repository; see the [11 November development log](docs/development-log/2026-11-11-aegis.md) |
+| AEGIS | In Progress — existing independent product | Continue verification and operational hardening in its own repository; see the [12 November development log](docs/development-log/2026-11-12-aegis.md) |
 | SENTINEL QA | Planned | Intended next major product; not yet implemented |
 | All other catalogue projects | Planned | Concepts for future discovery; not yet implemented |
 
@@ -274,7 +274,7 @@ Keep a short record of material changes in docs/decisions. Update this roadmap w
 
 ## 10. Immediate next actions
 
-1. Continue the outstanding AEGIS verification in its independent repository, following the [11 November AEGIS session record](docs/development-log/2026-11-11-aegis.md). This is ongoing work on an existing product, not a change to the next-new-product priority.
+1. Continue the outstanding AEGIS verification in its independent repository, following the [12 November AEGIS session record](docs/development-log/2026-11-12-aegis.md). This is ongoing work on an existing product, not a change to the next-new-product priority.
 2. Review the portfolio documentation and tracking system for consistency.
 3. Start SENTINEL QA discovery: problem statement, scope, architecture, toolchain, and first acceptance criteria.
 4. Build the first SENTINEL QA vertical slice only after its design is reviewed.

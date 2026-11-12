@@ -17,9 +17,9 @@ Each product should remain independently understandable and independently deploy
 
 **Status:** Active / In Progress  
 **Repository:** [aegis-security-platform](https://github.com/Nomusa990822/aegis-security-platform)  
-**Portfolio development record:** [11 November 2026 AEGIS log](../development-log/2026-11-11-aegis.md)
+**Portfolio development record:** [12 November 2026 AEGIS log](../development-log/2026-11-12-aegis.md)
 
-AEGIS is an existing independent cybersecurity product focused on defensive event ingestion, detection, alert investigation, threat context and controlled response workflows. Its implementation remains in its own repository. The 11 November checkpoint recorded detection-rule verification, UTC timestamp corrections and container data-permission hardening. Verification is ongoing; the portfolio log distinguishes completed evidence from outstanding work.
+AEGIS is an existing independent cybersecurity product focused on defensive event ingestion, detection, alert investigation, threat context and controlled response workflows. Its implementation remains in its own repository. The 12 November checkpoint records Docker recovery, local IAM schema and guarded migration, Argon2id password/account lifecycle, server-side session and browser-security primitives, persistent authentication throttling, and runtime verification. TOTP enrollment/verification, public login/session routes, dashboard integration and authorization integration remain subsequent work; the portfolio log distinguishes completed evidence from outstanding work.
 
 SENTINEL QA remains the next major **new** product planned for discovery. Its priority is not replaced by AEGIS's ongoing verification work.
 

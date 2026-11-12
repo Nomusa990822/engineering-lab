@@ -49,4 +49,5 @@ Start from [the development log template](../templates/DEVELOPMENT-LOG-TEMPLATE.
 ## Entries
 
 - [2026-11-10.md](2026-11-10.md) — portfolio documentation and governance foundation.
-- [2026-11-11-aegis.md](2026-11-11-aegis.md) — AEGIS detection verification, UTC timestamp correction, container hardening, verified permissions, session stopping point and next verification plan.
+- [2026-11-11-aegis.md](2026-11-11-aegis.md) — AEGIS detection verification, UTC timestamp correction, container hardening, verified permissions and next verification plan.
+- [2026-11-12-aegis.md](2026-11-12-aegis.md) — AEGIS Docker recovery, local IAM foundation, Phase 2A/2B security services, migration and runtime verification, current boundaries and next steps.
