@@ -52,6 +52,7 @@ Each product has its own purpose, repository, architecture, and release lifecycl
 
 | Area | Projects | Current state |
 |---|---|---|
+| **Cybersecurity** | AEGIS | Existing independent product; verification in progress |
 | **Quality engineering** | SENTINEL QA, QUANTUM TEST LAB, SENTINEL CODE | SENTINEL QA planned; others directional |
 | **Enterprise applications and automation** | MERIDIAN, ORBIT, FLOWSTATE, APEX, VERITAS | Directional catalogue |
 | **Computer science foundations** | FORGE, NEXUS, GITFORGE | Directional catalogue |
@@ -66,9 +67,13 @@ Each product has its own purpose, repository, architecture, and release lifecycl
 
 ## Current Work
 
+### AEGIS: Security detection and response platform
+
+AEGIS is an existing independent product in active verification and hardening. Its implementation remains in its own repository; ENGINEERING LAB records portfolio-level milestones and outstanding verification in the [11 November AEGIS development log](docs/development-log/2026-11-11-aegis.md).
+
 ### SENTINEL QA: Quality engineering platform
 
-SENTINEL QA is the next major planned product. It will explore maintainable automated testing across web interfaces, APIs, and performance workloads, with reproducible local and CI execution.
+SENTINEL QA is the next major planned **new** product. It will explore maintainable automated testing across web interfaces, APIs, and performance workloads, with reproducible local and CI execution.
 
 - **Candidate technologies:** Java, Maven, Selenium, JUnit or TestNG, REST Assured, JMeter, and GitHub Actions
 - **Integration direction:** select a test target after discovery and contract review
@@ -223,6 +228,7 @@ The portfolio may use Python, Java, C#, JavaScript/TypeScript, Go, C/C++, Rust, 
 | [ENGINEERING-STANDARDS.md](ENGINEERING-STANDARDS.md) | Development lifecycle, code quality, testing, security, and definition of done |
 | [INTEGRATION-STRATEGY.md](INTEGRATION-STRATEGY.md) | API, event, webhook, security, and integration contract guidance |
 | [Project status dashboard](docs/PROJECT-STATUS.md) | Evidence-based status, milestones, blockers, and next actions |
+| [AEGIS development log](docs/development-log/2026-11-11-aegis.md) | Consolidated 11 November AEGIS work, verification evidence, stopping point and next-session plan |
 | [Project catalogue](docs/project-catalogue/README.md) | Scope and direction of the portfolio projects |
 | [ADR index](docs/decisions/README.md) | Architecture decision process and accepted decisions |
 | [Documentation templates](docs/templates/README.md) | Reusable project README, technical specification, feature tracker, and development log templates |
