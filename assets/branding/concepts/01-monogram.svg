@@ -1,75 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 160 160"
+  viewBox="0 0 240 240"
   role="img"
   aria-labelledby="engineering-lab-monogram-title engineering-lab-monogram-description"
   id="engineering-lab-monogram"
   data-theme="auto">
 
-  <title id="engineering-lab-monogram-title">Engineering Lab — EL Monogram</title>
+  <title id="engineering-lab-monogram-title">Engineering Lab — Interlocked EL Monogram</title>
   <desc id="engineering-lab-monogram-description">
-    A minimal geometric monogram formed from the letters E and L.
-    The E uses the primary ink colour and the L uses the Engineering Lab blue accent.
+    An original geometric EL monogram. A squared E is nested within an open L-shaped
+    outer stroke. Both letterforms use one consistent colour.
   </desc>
 
   <style>
     /*
-     * Minimal EL monogram.
-     * No frame, orbit, nodes, gradients or decorative paths.
-     * Dark is the default; explicit data-theme values override it.
+     * One-colour interlocked EL mark.
+     * Dark and light use the Engineering Lab blue accent.
+     * Set data-variant="inverse" for a white mark on a blue surface.
      */
     #engineering-lab-monogram {
-      --el-ink: #E8EEF5;
-      --el-accent: #2F80FF;
+      --el-mark: #2F80FF;
     }
 
     @media (prefers-color-scheme: light) {
       #engineering-lab-monogram:not([data-theme="dark"]) {
-        --el-ink: #0F172A;
-        --el-accent: #2563EB;
+        --el-mark: #2563EB;
       }
     }
 
     #engineering-lab-monogram[data-theme="dark"] {
-      --el-ink: #E8EEF5;
-      --el-accent: #2F80FF;
+      --el-mark: #2F80FF;
     }
 
     #engineering-lab-monogram[data-theme="light"] {
-      --el-ink: #0F172A;
-      --el-accent: #2563EB;
+      --el-mark: #2563EB;
     }
 
-    .letter {
+    #engineering-lab-monogram[data-variant="inverse"] {
+      --el-mark: #FFFFFF;
+    }
+
+    .monogram {
       fill: none;
-      stroke-width: 10;
-      stroke-linecap: square;
+      stroke: var(--el-mark);
+      stroke-width: 17;
+      stroke-linecap: butt;
       stroke-linejoin: miter;
-    }
-
-    .letter-e {
-      stroke: var(--el-ink);
-    }
-
-    .letter-l {
-      stroke: var(--el-accent);
+      stroke-miterlimit: 4;
     }
   </style>
 
-  <!-- E: one vertical spine and three measured horizontal arms. -->
-  <path class="letter letter-e" d="
-    M 42 42
-    V 118
-    M 42 42 H 82
-    M 42 80 H 72
-    M 42 118 H 82
+  <!-- E: a continuous squared path with a measured central arm. -->
+  <path class="monogram" d="
+    M 82 42
+    H 190
+    V 74
+    H 116
+    V 104
+    H 158
+    V 136
+    H 116
+    V 166
+    H 190
+    V 198
+    H 82
+    Z
   "/>
 
-  <!-- L: a single right angle, aligned to the E's top and baseline. -->
-  <path class="letter letter-l" d="
-    M 102 42
-    V 118
-    H 132
+  <!-- L: an independent outer stroke with a chamfered upper terminal. -->
+  <path class="monogram" d="
+    M 64 66
+    L 46 84
+    V 218
+    H 190
   "/>
 </svg>
