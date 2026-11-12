@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>Engineering Lab — Brand Asset Preview</title>
+  <style>
+    :root {
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color-scheme: dark;
+      --page: #0B0F14;
+      --surface: #1C2836;
+      --surface-raised: #263548;
+      --text: #E8EEF5;
+      --muted: #94A3B8;
+      --border: #334155;
+      --accent: #2F80FF;
+    }
+
+    :root[data-theme="light"] {
+      color-scheme: light;
+      --page: #F8FAFC;
+      --surface: #FFFFFF;
+      --surface-raised: #F1F5F9;
+      --text: #0F172A;
+      --muted: #475569;
+      --border: #E2E8F0;
+      --accent: #2563EB;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 32px;
+      background: var(--page);
+      color: var(--text);
+      transition: background-color 160ms ease, color 160ms ease;
+    }
+
+    main {
+      width: min(100%, 1000px);
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    h1 { margin: 0 0 8px; font-size: clamp(1.5rem, 4vw, 2.25rem); }
+    h2 { margin: 0 0 8px; font-size: 1.15rem; }
+    p { color: var(--muted); line-height: 1.6; }
+
+    .theme-controls { display: flex; gap: 8px; }
+
+    button {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 9px 14px;
+      background: var(--surface);
+      color: var(--text);
+      font: inherit;
+      cursor: pointer;
+    }
+
+    button[aria-pressed="true"] {
+      border-color: var(--accent);
+      box-shadow: inset 0 0 0 1px var(--accent);
+    }
+
+    button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    section {
+      margin: 28px 0;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+
+    .logo-stage {
+      display: grid;
+      place-items: center;
+      min-height: 190px;
+      padding: 28px;
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      background: var(--page);
+    }
+
+    .logo-stage svg { display: block; width: min(100%, 640px); height: auto; }
+
+    .size-grid {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 18px;
+      padding-top: 18px;
+    }
+
+    .size-sample {
+      display: grid;
+      justify-items: center;
+      gap: 8px;
+      min-width: 48px;
+    }
+
+    .icon-stage {
+      display: grid;
+      place-items: center;
+      min-width: 48px;
+      min-height: 48px;
+      padding: 10px;
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      background: var(--page);
+    }
+
+    .icon-stage svg { display: block; }
+
+    .size-label {
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .status {
+      min-height: 1.5em;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    code {
+      padding: 2px 5px;
+      border-radius: 4px;
+      background: var(--surface-raised);
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 18px; }
+      section { padding: 16px; }
+      .logo-stage { padding: 16px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Engineering Lab brand assets</h1>
+        <p>SVG rendering and scale inspection for the full wordmark and standalone emblem.</p>
+      </div>
+      <div class="theme-controls" role="group" aria-label="Preview theme">
+        <button type="button" data-theme-choice="dark" aria-pressed="true">Dark</button>
+        <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+      </div>
+    </header>
+
+    <section aria-labelledby="wordmark-heading">
+      <h2 id="wordmark-heading">Primary logo</h2>
+      <p>Full wordmark on the active theme background.</p>
+      <div class="logo-stage" id="wordmark-preview">
+        <p>Loading primary logo…</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="emblem-heading">
+      <h2 id="emblem-heading">Standalone emblem — scale inspection</h2>
+      <p>Inspecting the same vector mark at common interface and identity sizes.</p>
+      <div class="size-grid" id="emblem-sizes">
+        <p>Loading emblem sizes…</p>
+      </div>
+    </section>
+
+    <p class="status" id="preview-status" role="status" aria-live="polite"></p>
+    <p>Source assets: <code>engineering-lab.svg</code> and <code>engineering-lab-icon.svg</code>.</p>
+  </main>
+
+  <script>
+    const themeButtons = [...document.querySelectorAll("[data-theme-choice]")];
+    const status = document.getElementById("preview-status");
+    const mountedSvgs = [];
+
+    function setTheme(theme) {
+      document.documentElement.dataset.theme = theme;
+      for (const svg of mountedSvgs) svg.dataset.theme = theme;
+      for (const button of themeButtons) {
+        button.setAttribute("aria-pressed", String(button.dataset.themeChoice === theme));
+      }
+    }
+
+    themeButtons.forEach(button => {
+      button.addEventListener("click", () => setTheme(button.dataset.themeChoice));
+    });
+
+    async function loadSvg(path, instanceId, widthPx = null) {
+      const response = await fetch(path);
+      if (!response.ok) throw new Error("Could not load " + path + " (" + response.status + ").");
+
+      const source = await response.text();
+      const parsed = new DOMParser().parseFromString(source, "image/svg+xml");
+      if (parsed.querySelector("parsererror")) throw new Error("Invalid SVG XML in " + path + ".");
+
+      const svg = document.importNode(parsed.documentElement, true);
+      const originalId = svg.id;
+      svg.id = instanceId;
+
+      for (const style of svg.querySelectorAll("style")) {
+        style.textContent = style.textContent.replaceAll("#" + originalId, "#" + instanceId);
+      }
+
+      const title = svg.querySelector("title");
+      const description = svg.querySelector("desc");
+      if (title) title.id = instanceId + "-title";
+      if (description) description.id = instanceId + "-description";
+      if (title && description) {
+        svg.setAttribute("aria-labelledby", title.id + " " + description.id);
+      }
+
+      svg.removeAttribute("width");
+      svg.removeAttribute("height");
+      svg.style.width = widthPx ? widthPx + "px" : "100%";
+      svg.style.height = "auto";
+      svg.dataset.theme = document.documentElement.dataset.theme || "dark";
+      mountedSvgs.push(svg);
+      return svg;
+    }
+
+    async function renderPreviews() {
+      try {
+        const wordmark = await loadSvg("engineering-lab.svg", "preview-wordmark");
+        const wordmarkStage = document.getElementById("wordmark-preview");
+        wordmarkStage.replaceChildren(wordmark);
+
+        const sizes = [16, 24, 32, 48, 64, 128, 256];
+        const sizeContainer = document.getElementById("emblem-sizes");
+        sizeContainer.replaceChildren();
+
+        for (const size of sizes) {
+          const sample = document.createElement("div");
+          sample.className = "size-sample";
+
+          const stage = document.createElement("div");
+          stage.className = "icon-stage";
+          stage.setAttribute("aria-label", "Emblem preview at " + size + " pixels");
+
+          const emblem = await loadSvg(
+            "engineering-lab-icon.svg",
+            "preview-emblem-" + size,
+            size
+          );
+
+          const label = document.createElement("span");
+          label.className = "size-label";
+          label.textContent = size + " px";
+
+          stage.append(emblem);
+          sample.append(stage, label);
+          sizeContainer.append(sample);
+        }
+
+        setTheme("dark");
+        status.textContent = "Both SVG assets loaded and parsed as XML. Use the theme controls to inspect light and dark variants.";
+      } catch (error) {
+        status.textContent = error.message + " Open this page through a local HTTP server from the branding directory.";
+      }
+    }
+
+    renderPreviews();
+  </script>
+</body>
+</html>
