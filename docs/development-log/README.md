@@ -40,7 +40,7 @@ Use lowercase kebab-case for the project name.
 
 ## Relationship to product repositories
 
-The portfolio log records cross-project work and major portfolio-level sessions. Product-specific implementation logs should normally live in their respective repositories. Link to them when useful; avoid duplicating every commit or daily task.
+The portfolio log records cross-project work and major portfolio-level sessions. **AEGIS reporting exception:** the user has designated ENGINEERING LAB as the home for consolidated AEGIS progress records, milestone reports, verification summaries and next-session plans. Keep AEGIS implementation, source code and executable tests in its independent product repository, but do not place these ENGINEERING LAB portfolio reports there. For other products, follow their explicitly agreed documentation arrangement. Avoid duplicating every commit or daily task.
 
 ## Template
 
