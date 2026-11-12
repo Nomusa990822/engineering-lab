@@ -21,6 +21,7 @@
 | Project | Status | Current milestone | Blockers / dependencies | Latest evidence | Next action |
 |---|---|---|---|---|---|
 | ENGINEERING LAB | In Progress | Portfolio documentation consistency | None recorded | Core documentation, templates, ADRs, project catalogue and status dashboard are linked from the hub | Maintain consistency as projects and milestones change |
+| AEGIS | In Progress | Detection and runtime verification | Duplicate-event semantics, full current-revision test reconciliation, port exposure, authorization matrix and backup/restore remain open | [11 November development log](development-log/2026-11-11-aegis.md); PR #7 and #8 merged in the independent product repository | Resume verification from the recorded next-session plan |
 | SENTINEL QA | Planned | Discovery and technical specification | Integration targets and contracts should be selected during discovery | No implementation recorded in this portfolio tracker | Define MVP scope, architecture and acceptance criteria |
 | MERIDIAN | Planned | Discovery | Depends on requirements and technology selection | No implementation recorded in this portfolio tracker | Write problem statement and domain model |
 | ORBIT | Planned | Discovery | Clarify boundary with FLOWSTATE | No implementation recorded in this portfolio tracker | Define the visual builder's distinct scope |
@@ -72,3 +73,4 @@ For every meaningful status change:
 |---|---|
 | 2026-11-10 | Initial portfolio status dashboard created from the verified documentation foundation and known project context. |
 | 2026-11-10 | Homepage navigation and roadmap status vocabulary aligned with the tracking system. |
+| 2026-11-11 | Added the AEGIS development record covering detection verification, UTC timestamp correction, container data-permission hardening, evidence and remaining verification. Product implementation remains in its independent repository. |
