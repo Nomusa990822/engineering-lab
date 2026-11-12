@@ -1,14 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
-<title id="title">Concept 03 — Core Node</title><desc id="desc">Minimal original Engineering Lab emblem concept.</desc>
-<style>
-:root{color-scheme:dark;--ink:#E8EEF5;--muted:#94A3B8;--line:#334155;--accent:#2F80FF;--accent2:#60A5FA}
-@media(prefers-color-scheme:light){:root{color-scheme:light;--ink:#0F172A;--muted:#475569;--line:#CBD5E1;--accent:#2563EB;--accent2:#1D4ED8}}
-svg[data-theme="dark"]{--ink:#E8EEF5;--muted:#94A3B8;--line:#334155;--accent:#2F80FF;--accent2:#60A5FA}
-svg[data-theme="light"]{--ink:#0F172A;--muted:#475569;--line:#CBD5E1;--accent:#2563EB;--accent2:#1D4ED8}
-.stroke{fill:none;stroke:var(--ink);stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
-.accent{fill:none;stroke:var(--accent);stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
-.fill{fill:var(--accent)}
-</style>
-<path class="stroke" d="M80 35L119 58V102L80 125L41 102V58Z"/><path class="accent" d="M80 35V18M119 58L137 48M119 102L137 112M80 125V142M41 102L23 112M41 58L23 48"/><circle class="fill" cx="80" cy="18" r="5"/><circle class="fill" cx="137" cy="48" r="5"/><circle class="fill" cx="137" cy="112" r="5"/><circle class="fill" cx="80" cy="142" r="5"/><circle class="fill" cx="23" cy="112" r="5"/><circle class="fill" cx="23" cy="48" r="5"/><path class="stroke" d="M63 94V66L97 94V66"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 240 240"
+  role="img"
+  aria-labelledby="engineering-lab-core-title engineering-lab-core-description"
+  id="engineering-lab-core-node"
+  data-theme="auto">
+
+  <title id="engineering-lab-core-title">Engineering Lab — Core Node</title>
+  <desc id="engineering-lab-core-description">
+    A minimal network emblem consisting of one central core and six evenly spaced
+    circular nodes connected by straight radial lines.
+  </desc>
+
+  <style>
+    /* A single-colour geometric mark using the established brand accent. */
+    #engineering-lab-core-node {
+      --el-node: #2F80FF;
+    }
+
+    @media (prefers-color-scheme: light) {
+      #engineering-lab-core-node:not([data-theme="dark"]) {
+        --el-node: #2563EB;
+      }
+    }
+
+    #engineering-lab-core-node[data-theme="dark"] {
+      --el-node: #2F80FF;
+    }
+
+    #engineering-lab-core-node[data-theme="light"] {
+      --el-node: #2563EB;
+    }
+
+    #engineering-lab-core-node[data-variant="inverse"] {
+      --el-node: #FFFFFF;
+    }
+
+    .connection {
+      fill: none;
+      stroke: var(--el-node);
+      stroke-width: 9;
+      stroke-linecap: round;
+    }
+
+    .node {
+      fill: none;
+      stroke: var(--el-node);
+      stroke-width: 9;
+    }
+
+    .core {
+      fill: var(--el-node);
+    }
+  </style>
+
+  <!-- Six evenly spaced connections radiate from the central core. -->
+  <g id="connections" class="connection">
+    <path d="M 120 94 V 49"/>
+    <path d="M 142.5 107 L 181.5 84.5"/>
+    <path d="M 142.5 133 L 181.5 155.5"/>
+    <path d="M 120 146 V 191"/>
+    <path d="M 97.5 133 L 58.5 155.5"/>
+    <path d="M 97.5 107 L 58.5 84.5"/>
+  </g>
+
+  <!-- Outer nodes share one size and one consistent stroke. -->
+  <g id="outer-nodes" class="node">
+    <circle cx="120" cy="38" r="10"/>
+    <circle cx="191" cy="79" r="10"/>
+    <circle cx="191" cy="161" r="10"/>
+    <circle cx="120" cy="202" r="10"/>
+    <circle cx="49" cy="161" r="10"/>
+    <circle cx="49" cy="79" r="10"/>
+  </g>
+
+  <!-- The central core is the only filled element. -->
+  <circle class="core" cx="120" cy="120" r="12"/>
 </svg>
