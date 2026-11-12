@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600" role="img" aria-label="Engineering Lab — Layered Strata logo">
+  <title>Engineering Lab — Layered Strata</title>
+  <g transform="translate(18 18) scale(0.55)" color="#2563EB">
+    
+<g fill="none" stroke="currentColor" stroke-width="18" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M512 204 L816 386 Q830 394 816 403 L704 468"/>
+  <path d="M512 204 L208 386 Q194 394 208 403 L320 468"/>
+  <path d="M320 468 L512 578 L704 468"/>
+  <path d="M208 488 L512 666 L816 488"/>
+  <path d="M208 598 L512 778 L816 598"/>
+</g>
+
+  </g>
+  <g fill="#0F172A" font-family="Inter, Arial, Helvetica, sans-serif">
+    <text x="650" y="280" font-size="104" font-weight="700" letter-spacing="3">ENGINEERING</text>
+    <text x="650" y="395" font-size="104" font-weight="700" letter-spacing="3">LAB</text>
+  </g>
+  <path d="M650 430 H1450" stroke="#2563EB" stroke-width="8" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="Layered Strata emblem">
+  <title>Layered Strata — Engineering Lab emblem</title>
+  <g color="#2563EB">
+    
+<g fill="none" stroke="currentColor" stroke-width="18" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M512 204 L816 386 Q830 394 816 403 L704 468"/>
+  <path d="M512 204 L208 386 Q194 394 208 403 L320 468"/>
+  <path d="M320 468 L512 578 L704 468"/>
+  <path d="M208 488 L512 666 L816 488"/>
+  <path d="M208 598 L512 778 L816 598"/>
+</g>
+
+  </g>
+</svg>
