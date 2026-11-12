@@ -11,6 +11,18 @@ Each product should remain independently understandable and independently deploy
 - **Discovery required:** the concept needs sharper boundaries or feasibility work before implementation.
 - **Proposed integration:** a possible connection between products; not implemented unless separately verified.
 
+## Existing active product
+
+### AEGIS — Security Detection and Response Platform
+
+**Status:** Active / In Progress  
+**Repository:** [aegis-security-platform](https://github.com/Nomusa990822/aegis-security-platform)  
+**Portfolio development record:** [11 November 2026 AEGIS log](../development-log/2026-11-11-aegis.md)
+
+AEGIS is an existing independent cybersecurity product focused on defensive event ingestion, detection, alert investigation, threat context and controlled response workflows. Its implementation remains in its own repository. The 11 November checkpoint recorded detection-rule verification, UTC timestamp corrections and container data-permission hardening. Verification is ongoing; the portfolio log distinguishes completed evidence from outstanding work.
+
+SENTINEL QA remains the next major **new** product planned for discovery. Its priority is not replaced by AEGIS's ongoing verification work.
+
 ## Priority overview
 
 | Priority | Project | Status | Intended focus |
