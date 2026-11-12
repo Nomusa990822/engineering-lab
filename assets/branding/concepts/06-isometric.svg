@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+<title id="title">Concept 06 — Isometric</title><desc id="desc">Minimal original Engineering Lab emblem concept.</desc>
+<style>
+:root{color-scheme:dark;--ink:#E8EEF5;--muted:#94A3B8;--line:#334155;--accent:#2F80FF;--accent2:#60A5FA}
+@media(prefers-color-scheme:light){:root{color-scheme:light;--ink:#0F172A;--muted:#475569;--line:#CBD5E1;--accent:#2563EB;--accent2:#1D4ED8}}
+svg[data-theme="dark"]{--ink:#E8EEF5;--muted:#94A3B8;--line:#334155;--accent:#2F80FF;--accent2:#60A5FA}
+svg[data-theme="light"]{--ink:#0F172A;--muted:#475569;--line:#CBD5E1;--accent:#2563EB;--accent2:#1D4ED8}
+.stroke{fill:none;stroke:var(--ink);stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+.accent{fill:none;stroke:var(--accent);stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+.fill{fill:var(--accent)}
+</style>
+<path class="stroke" d="M80 24L126 50V103L80 130L34 103V50Z"/><path class="stroke" d="M80 130V77L34 50M80 77L126 50"/><path class="accent" d="M80 24V77"/>
+</svg>
